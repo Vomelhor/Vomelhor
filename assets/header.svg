@@ -1,78 +1,393 @@
-<svg xmlns="http://w3.org" viewBox="0 0 900 280">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 900 280"
+  preserveAspectRatio="xMidYMid meet"
+>
+
   <defs>
-    <!-- Gradiente linear idêntico ao capsule-render -->
+
+    <!-- ========================================= -->
+    <!-- GRADIENT -->
+    <!-- ========================================= -->
+
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00D9FF"/>
       <stop offset="50%" stop-color="#7B2FF7"/>
       <stop offset="100%" stop-color="#FF2E97"/>
     </linearGradient>
-    
+
+    <!-- ========================================= -->
+    <!-- BACKGROUND -->
+    <!-- ========================================= -->
+
+    <radialGradient id="bgGlow" cx="50%" cy="40%">
+      <stop offset="0%" stop-color="#161B26"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </radialGradient>
+
+    <!-- ========================================= -->
+    <!-- GLOW -->
+    <!-- ========================================= -->
+
+    <filter
+      id="glow"
+      x="-50%"
+      y="-50%"
+      width="200%"
+      height="200%"
+      filterUnits="userSpaceOnUse"
+    >
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- ========================================= -->
+    <!-- STYLES -->
+    <!-- ========================================= -->
+
     <style>
-      /* Animação horizontal da onda aceita pelo GitHub */
-      @keyframes waveScroll {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(-900px); }
-      }
-      .wave-path {
-        animation: waveScroll 15s linear infinite;
+
+      .title {
+        font-family: Arial, sans-serif;
+        font-size: 46px;
+        font-weight: 900;
+        letter-spacing: 4px;
+        fill: #FFFFFF;
       }
 
-      /* Animações de digitação sequencial para os textos */
-      @keyframes typing {
-        0%, 100% { width: 0; opacity: 0; }
-        2%, 23% { width: 100%; opacity: 1; }
-        24% { width: 0; opacity: 0; }
+      .subtitle {
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        letter-spacing: 3px;
+        fill: #ffffff;
+        fill-opacity: 0.55;
       }
-      
-      .type-text {
+
+      .typing {
         font-family: 'Courier New', monospace;
-        font-size: 17px;
-        fill: #00D9FF;
-        overflow: hidden;
-        white-space: nowrap;
+        font-size: 18px;
+        fill: #FFFFFF;
       }
-      
-      /* Controla o tempo de exibição e digitação de cada frase */
-      .t1 { animation: typing 16s steps(40) infinite; animation-delay: 0s; }
-      .t2 { animation: typing 16s steps(40) infinite; animation-delay: 4s; }
-      .t3 { animation: typing 16s steps(40) infinite; animation-delay: 8s; }
-      .t4 { animation: typing 16s steps(40) infinite; animation-delay: 12s; }
+
     </style>
+
+    <!-- ========================================= -->
+    <!-- TYPE MASKS -->
+    <!-- ========================================= -->
+
+    <!-- phrase 1 -->
+
+    <clipPath id="m1">
+
+      <rect x="215" y="145" width="0" height="26">
+
+        <animate
+          attributeName="width"
+          dur="20s"
+          repeatCount="indefinite"
+
+          values="
+            0;
+            443;
+            443;
+            0;
+            0
+          "
+
+          keyTimes="
+            0.00;
+            0.18;
+            0.30;
+            0.36;
+            1
+          "
+        />
+
+      </rect>
+
+    </clipPath>
+
+    <!-- phrase 2 -->
+
+    <clipPath id="m2">
+
+      <rect x="215" y="145" width="0" height="26">
+
+        <animate
+          attributeName="width"
+          dur="20s"
+          repeatCount="indefinite"
+
+          values="
+            0;
+            0;
+            432;
+            432;
+            0;
+            0
+          "
+
+          keyTimes="
+            0.00;
+            0.38;
+            0.54;
+            0.66;
+            0.72;
+            1
+          "
+        />
+
+      </rect>
+
+    </clipPath>
+
+    <!-- phrase 3 -->
+
+    <clipPath id="m3">
+
+      <rect x="215" y="145" width="0" height="26">
+
+        <animate
+          attributeName="width"
+          dur="20s"
+          repeatCount="indefinite"
+
+          values="
+            0;
+            0;
+            356;
+            356;
+            356;
+            0
+          "
+
+          keyTimes="
+            0.00;
+            0.74;
+            0.86;
+            0.93;
+            0.98;
+            1
+          "
+        />
+
+      </rect>
+
+    </clipPath>
+
   </defs>
 
-  <!-- Fundo escuro padrão do GitHub -->
-  <rect width="900" height="280" fill="#0D1117"/>
-  
-  <!-- Banner principal com onda infinita e fluida -->
-  <g fill="url(#g)">
-    <path class="wave-path" d="M 0,0 L 1800,0 L 1800,200 C 1665,240 1575,160 1350,200 C 1125,240 1035,160 900,200 C 765,240 675,160 450,200 C 225,240 135,160 0,200 Z" />
+  <!-- ========================================= -->
+  <!-- BACKGROUND -->
+  <!-- ========================================= -->
+
+  <rect
+    width="900"
+    height="280"
+    fill="url(#bgGlow)"
+  />
+
+  <!-- ========================================= -->
+  <!-- PARTICLES -->
+  <!-- ========================================= -->
+
+  <g fill="#FFFFFF" opacity="0.75">
+
+    <circle cx="100" cy="40" r="2">
+      <animate attributeName="opacity" values="0;1;0" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="250" cy="65" r="1.5">
+      <animate attributeName="opacity" values="0;1;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="450" cy="28" r="2">
+      <animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="670" cy="45" r="1.5">
+      <animate attributeName="opacity" values="0;1;0" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+
+    <circle cx="820" cy="32" r="2">
+      <animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+
   </g>
 
-  <!-- Estrelas cintilantes -->
-  <circle cx="45"  cy="25" r="2"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2s"   repeatCount="indefinite" begin="0s"/></circle>
-  <circle cx="140" cy="45" r="1.5" fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="0.4s"/></circle>
-  <circle cx="265" cy="18" r="2"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="0.8s"/></circle>
-  <circle cx="390" cy="38" r="1.5" fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.3s" repeatCount="indefinite" begin="1.2s"/></circle>
-  <circle cx="510" cy="22" r="1"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.6s" repeatCount="indefinite" begin="0.6s"/></circle>
-  <circle cx="650" cy="52" r="2"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.7s" repeatCount="indefinite" begin="1.0s"/></circle>
-  <circle cx="780" cy="32" r="1.5" fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2s"   repeatCount="indefinite" begin="1.5s"/></circle>
-  <circle cx="870" cy="58" r="1.5" fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.2s" repeatCount="indefinite" begin="0.3s"/></circle>
-  <circle cx="90"  cy="68" r="1"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.7s" repeatCount="indefinite" begin="0.7s"/></circle>
-  <circle cx="340" cy="62" r="1.5" fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.4s" repeatCount="indefinite" begin="0.9s"/></circle>
-  <circle cx="580" cy="68" r="1"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.9s" repeatCount="indefinite" begin="1.3s"/></circle>
-  <circle cx="190" cy="30" r="1"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.6s" repeatCount="indefinite" begin="1.1s"/></circle>
-  <circle cx="460" cy="72" r="1.5" fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2s"   repeatCount="indefinite" begin="0.2s"/></circle>
-  <circle cx="720" cy="25" r="2"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="1.4s"/></circle>
-  <circle cx="840" cy="70" r="1"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite" begin="0.5s"/></circle>
+  <!-- ========================================= -->
+  <!-- WAVE 1 -->
+  <!-- ========================================= -->
 
-  <!-- Nome Principal Estático -->
-  <text x="450" y="95" font-family="Arial,sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">VITOR ALVES SANTOS</text>
+  <path
+    fill="url(#g)"
+    opacity="0.95"
+  >
 
-  <!-- Textos Dinâmicos com Efeito Estilo Terminal/Typing -->
-  <g text-anchor="middle">
-    <text x="450" y="152" class="type-text t1">&gt;_ Developer // React · TypeScript · Next.js</text>
-    <text x="450" y="152" class="type-text t2">&gt;_ Building interfaces that feel inevitable</text>
-    <text x="450" y="152" class="type-text t3">&gt;_ Pixel-perfect, fast &amp; intentional</text>
-    <text x="450" y="152" class="type-text t4">&gt;_ Always shipping, always learning</text>
+    <animate
+      attributeName="d"
+      dur="8s"
+      repeatCount="indefinite"
+
+      values="
+        M0,0 L900,0 L900,190
+        C760,240 650,150 500,190
+        C350,230 220,150 0,200 Z;
+
+        M0,0 L900,0 L900,210
+        C780,160 620,250 450,190
+        C280,140 120,240 0,180 Z;
+
+        M0,0 L900,0 L900,190
+        C760,240 650,150 500,190
+        C350,230 220,150 0,200 Z
+      "
+    />
+
+  </path>
+
+  <!-- ========================================= -->
+  <!-- WAVE 2 -->
+  <!-- ========================================= -->
+
+  <path
+    fill="url(#g)"
+    opacity="0.35"
+    filter="url(#glow)"
+  >
+
+    <animate
+      attributeName="d"
+      dur="10s"
+      repeatCount="indefinite"
+
+      values="
+        M0,0 L900,0 L900,205
+        C820,170 700,250 520,210
+        C340,170 180,240 0,195 Z;
+
+        M0,0 L900,0 L900,185
+        C760,250 620,140 430,210
+        C240,260 120,150 0,210 Z;
+
+        M0,0 L900,0 L900,205
+        C820,170 700,250 520,210
+        C340,170 180,240 0,195 Z
+      "
+    />
+
+  </path>
+
+  <!-- ========================================= -->
+  <!-- TITLE -->
+  <!-- ========================================= -->
+
+  <g>
+
+    <text
+      x="450"
+      y="92"
+      text-anchor="middle"
+      class="title"
+    >
+
+      VITOR ALVES SANTOS
+
+      <animateTransform
+        attributeName="transform"
+        type="translate"
+        values="0 0;0 -1;0 0"
+        dur="5s"
+        repeatCount="indefinite"
+      />
+
+    </text>
+
+    <text
+      x="450"
+      y="118"
+      text-anchor="middle"
+      class="subtitle"
+    >
+
+      FULLSTACK ENGINEER · UI SYSTEMS · CREATIVE DEV
+
+    </text>
+
   </g>
+
+  <!-- ========================================= -->
+  <!-- TERMINAL -->
+  <!-- ========================================= -->
+
+  <text
+    x="175"
+    y="165"
+    class="typing"
+    fill="#00D9FF"
+  >
+    &gt;_
+  </text>
+
+  <!-- phrase 1 -->
+
+  <g clip-path="url(#m1)">
+    <text x="215" y="165" class="typing">
+      Developer // React · TypeScript · Next.js
+    </text>
+  </g>
+
+  <!-- phrase 2 -->
+
+  <g clip-path="url(#m2)">
+    <text x="215" y="165" class="typing">
+      Building interfaces that feel inevitable
+    </text>
+  </g>
+
+  <!-- phrase 3 -->
+
+  <g clip-path="url(#m3)">
+    <text x="215" y="165" class="typing">
+      Pixel-perfect, fast &amp; intentional
+    </text>
+  </g>
+
+  <!-- ========================================= -->
+  <!-- CURSOR -->
+  <!-- ========================================= -->
+
+  <!-- Cursor: outer <g> controls show/hide per phrase, inner rect handles blink + x position -->
+  <g>
+
+    <!-- show during phrase 1 (0–0.36), hide gap, show phrase 2 (0.38–0.72), hide gap, show phrase 3 (0.74–1) -->
+    <animate
+      attributeName="opacity"
+      dur="20s"
+      repeatCount="indefinite"
+      values="1;1;0;0;1;1;0;0;1;1"
+      keyTimes="0;0.359;0.36;0.379;0.38;0.719;0.72;0.739;0.74;1"
+    />
+
+    <rect x="215" y="149" width="9" height="19" rx="2" fill="#00D9FF">
+
+      <!-- blink: discrete 0.9s, independent of show/hide -->
+      <animate attributeName="opacity" values="1;0" dur="0.9s" repeatCount="indefinite" calcMode="discrete"/>
+
+      <!-- x follows cursor to end of each phrase then resets -->
+      <animate
+        attributeName="x"
+        dur="20s"
+        repeatCount="indefinite"
+        values="215;658;658;215;215;647;647;215;215;571;571;215"
+        keyTimes="0;0.18;0.30;0.36;0.38;0.54;0.66;0.72;0.74;0.86;0.98;1"
+      />
+
+    </rect>
+
+  </g>
+
 </svg>
