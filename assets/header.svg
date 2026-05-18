@@ -1,16 +1,54 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220">
+<svg xmlns="http://w3.org" viewBox="0 0 900 280">
   <defs>
+    <!-- Gradiente linear idêntico ao capsule-render -->
     <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FF2E97"/>
+      <stop offset="0%" stop-color="#00D9FF"/>
       <stop offset="50%" stop-color="#7B2FF7"/>
-      <stop offset="100%" stop-color="#00D9FF"/>
+      <stop offset="100%" stop-color="#FF2E97"/>
     </linearGradient>
+    
+    <style>
+      /* Animação horizontal da onda aceita pelo GitHub */
+      @keyframes waveScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-900px); }
+      }
+      .wave-path {
+        animation: waveScroll 15s linear infinite;
+      }
+
+      /* Animações de digitação sequencial para os textos */
+      @keyframes typing {
+        0%, 100% { width: 0; opacity: 0; }
+        2%, 23% { width: 100%; opacity: 1; }
+        24% { width: 0; opacity: 0; }
+      }
+      
+      .type-text {
+        font-family: 'Courier New', monospace;
+        font-size: 17px;
+        fill: #00D9FF;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      
+      /* Controla o tempo de exibição e digitação de cada frase */
+      .t1 { animation: typing 16s steps(40) infinite; animation-delay: 0s; }
+      .t2 { animation: typing 16s steps(40) infinite; animation-delay: 4s; }
+      .t3 { animation: typing 16s steps(40) infinite; animation-delay: 8s; }
+      .t4 { animation: typing 16s steps(40) infinite; animation-delay: 12s; }
+    </style>
   </defs>
 
-  <rect width="900" height="220" fill="#0D1117"/>
-  <path d="M0,220 Q225,165 450,190 Q675,215 900,180 L900,0 L0,0 Z" fill="url(#g)"/>
+  <!-- Fundo escuro padrão do GitHub -->
+  <rect width="900" height="280" fill="#0D1117"/>
+  
+  <!-- Banner principal com onda infinita e fluida -->
+  <g fill="url(#g)">
+    <path class="wave-path" d="M 0,0 L 1800,0 L 1800,200 C 1665,240 1575,160 1350,200 C 1125,240 1035,160 900,200 C 765,240 675,160 450,200 C 225,240 135,160 0,200 Z" />
+  </g>
 
-  <!-- Twinkling stars -->
+  <!-- Estrelas cintilantes -->
   <circle cx="45"  cy="25" r="2"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2s"   repeatCount="indefinite" begin="0s"/></circle>
   <circle cx="140" cy="45" r="1.5" fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.5s" repeatCount="indefinite" begin="0.4s"/></circle>
   <circle cx="265" cy="18" r="2"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.8s" repeatCount="indefinite" begin="0.8s"/></circle>
@@ -27,22 +65,14 @@
   <circle cx="720" cy="25" r="2"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="1.4s"/></circle>
   <circle cx="840" cy="70" r="1"   fill="white" opacity="0"><animate attributeName="opacity" values="0;1;0" dur="2.8s" repeatCount="indefinite" begin="0.5s"/></circle>
 
-  <text x="450" y="88" font-family="Arial,sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">VITOR ALVES SANTOS</text>
+  <!-- Nome Principal Estático -->
+  <text x="450" y="95" font-family="Arial,sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">VITOR ALVES SANTOS</text>
 
-  <text x="450" y="152" font-family="Courier New,monospace" font-size="17" fill="#00D9FF" text-anchor="middle" opacity="0">
-    &gt;_ Developer // React · TypeScript · Next.js
-    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.03;0.22;0.25;1" dur="16s" repeatCount="indefinite"/>
-  </text>
-  <text x="450" y="152" font-family="Courier New,monospace" font-size="17" fill="#00D9FF" text-anchor="middle" opacity="0">
-    &gt;_ Building interfaces that feel inevitable
-    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.25;0.28;0.47;0.5;1" dur="16s" repeatCount="indefinite"/>
-  </text>
-  <text x="450" y="152" font-family="Courier New,monospace" font-size="17" fill="#00D9FF" text-anchor="middle" opacity="0">
-    &gt;_ Pixel-perfect, fast &amp; intentional
-    <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.5;0.53;0.72;0.75;1" dur="16s" repeatCount="indefinite"/>
-  </text>
-  <text x="450" y="152" font-family="Courier New,monospace" font-size="17" fill="#00D9FF" text-anchor="middle" opacity="0">
-    &gt;_ Always shipping, always learning
-    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.75;0.78;0.97;1" dur="16s" repeatCount="indefinite"/>
-  </text>
+  <!-- Textos Dinâmicos com Efeito Estilo Terminal/Typing -->
+  <g text-anchor="middle">
+    <text x="450" y="152" class="type-text t1">&gt;_ Developer // React · TypeScript · Next.js</text>
+    <text x="450" y="152" class="type-text t2">&gt;_ Building interfaces that feel inevitable</text>
+    <text x="450" y="152" class="type-text t3">&gt;_ Pixel-perfect, fast &amp; intentional</text>
+    <text x="450" y="152" class="type-text t4">&gt;_ Always shipping, always learning</text>
+  </g>
 </svg>
