@@ -1,15 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 320" preserveAspectRatio="xMidYMid meet">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 310">
 <defs>
 
-  <radialGradient id="bg" cx="50%" cy="35%">
-    <stop offset="0%" stop-color="#151c2e"/>
+  <radialGradient id="bg" cx="50%" cy="30%">
+    <stop offset="0%" stop-color="#171e30"/>
     <stop offset="100%" stop-color="#0D1117"/>
   </radialGradient>
-
-  <linearGradient id="wg" x1="0%" y1="0%" x2="100%" y2="0%">
+  <linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="0%">
     <stop offset="0%" stop-color="#FF2E97"/>
     <stop offset="50%" stop-color="#7B2FF7"/>
     <stop offset="100%" stop-color="#00D9FF"/>
+  </linearGradient>
+  <linearGradient id="topTint" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%"   stop-color="#7B2FF7" stop-opacity=".28"/>
+    <stop offset="55%"  stop-color="#FF2E97" stop-opacity=".07"/>
+    <stop offset="100%" stop-color="#00D9FF" stop-opacity=".04"/>
   </linearGradient>
 
   <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
@@ -17,206 +21,294 @@
     <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
   <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="8" result="b"/>
+    <feGaussianBlur stdDeviation="9" result="b"/>
     <feMergeNode in="b"/>
   </filter>
+  <filter id="cshadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity=".8"/>
+  </filter>
+  <filter id="subtitleTwinkle">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="0" result="b">
+      <animate attributeName="stdDeviation"
+        values="0;3;0;1.5;0;4;0;2;0;3.5;0"
+        dur="4s" calcMode="discrete" repeatCount="indefinite" begin="6.2s"/>
+    </feGaussianBlur>
+    <feMerge>
+      <feMergeNode in="b"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
 
-  <!-- name typewriter mask -->
+  <!-- name typewriter mask — plays once on load -->
   <clipPath id="nm">
-    <rect x="115" y="42" height="52" width="0">
-      <animate attributeName="width" values="0;0;570;570" keyTimes="0;0.013;0.087;1" dur="30s" repeatCount="indefinite"/>
+    <rect x="115" y="45" height="48" width="0">
+      <animate attributeName="width" from="0" to="570" dur="2s" begin="0.4s" repeatCount="1" fill="freeze"/>
     </rect>
   </clipPath>
 
-  <!-- subtitle reveal mask -->
+  <!-- subtitle reveal mask — plays once -->
   <clipPath id="sm">
-    <rect x="0" y="92" height="26" width="0">
-      <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.12;0.17;1" dur="30s" repeatCount="indefinite"/>
+    <rect x="0" y="92" height="28" width="0">
+      <animate attributeName="width" from="0" to="900" dur="1.5s" begin="5.2s" repeatCount="1" fill="freeze"/>
     </rect>
   </clipPath>
 
-  <!-- tech row 1 mask -->
-  <clipPath id="t1m">
-    <rect x="0" y="127" height="22" width="0">
-      <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.18;0.23;1" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </clipPath>
+  <!-- phrase masks — cycle forever starting at t=9.5s, dur=49s (7 × 7s) -->
+  <clipPath id="p1"><rect x="215" y="198" height="24" width="0">
+    <animate attributeName="width" values="0;445;445;0;0"       keyTimes="0;0.031;0.112;0.133;1"                       dur="49s" begin="9.5s" repeatCount="indefinite"/>
+  </rect></clipPath>
+  <clipPath id="p2"><rect x="215" y="198" height="24" width="0">
+    <animate attributeName="width" values="0;0;432;432;0;0"     keyTimes="0;0.143;0.173;0.255;0.276;1"                 dur="49s" begin="9.5s" repeatCount="indefinite"/>
+  </rect></clipPath>
+  <clipPath id="p3"><rect x="215" y="198" height="24" width="0">
+    <animate attributeName="width" values="0;0;432;432;0;0"     keyTimes="0;0.286;0.316;0.398;0.418;1"                 dur="49s" begin="9.5s" repeatCount="indefinite"/>
+  </rect></clipPath>
+  <clipPath id="p4"><rect x="215" y="198" height="24" width="0">
+    <animate attributeName="width" values="0;0;355;355;0;0"     keyTimes="0;0.429;0.459;0.541;0.561;1"                 dur="49s" begin="9.5s" repeatCount="indefinite"/>
+  </rect></clipPath>
+  <clipPath id="p5"><rect x="215" y="198" height="24" width="0">
+    <animate attributeName="width" values="0;0;380;380;0;0"     keyTimes="0;0.571;0.602;0.684;0.704;1"                 dur="49s" begin="9.5s" repeatCount="indefinite"/>
+  </rect></clipPath>
+  <clipPath id="p6"><rect x="215" y="198" height="24" width="0">
+    <animate attributeName="width" values="0;0;345;345;0;0"     keyTimes="0;0.714;0.745;0.827;0.847;1"                 dur="49s" begin="9.5s" repeatCount="indefinite"/>
+  </rect></clipPath>
+  <clipPath id="p7"><rect x="215" y="198" height="24" width="0">
+    <animate attributeName="width" values="0;0;320;320;0;0"     keyTimes="0;0.857;0.888;0.969;0.990;1"                 dur="49s" begin="9.5s" repeatCount="indefinite"/>
+  </rect></clipPath>
 
-  <!-- tech row 2 mask -->
-  <clipPath id="t2m">
-    <rect x="0" y="150" height="22" width="0">
-      <animate attributeName="width" values="0;0;900;900" keyTimes="0;0.23;0.28;1" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </clipPath>
-
-  <!-- phrase masks (cycling terminal line, starts t=9s) -->
-  <clipPath id="p1">
-    <rect x="215" y="199" height="24" width="0">
-      <animate attributeName="width" values="0;0;443;443;0;0" keyTimes="0;0.30;0.35;0.50;0.54;1" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </clipPath>
-  <clipPath id="p2">
-    <rect x="215" y="199" height="24" width="0">
-      <animate attributeName="width" values="0;0;432;432;0;0" keyTimes="0;0.55;0.60;0.73;0.77;1" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </clipPath>
-  <clipPath id="p3">
-    <rect x="215" y="199" height="24" width="0">
-      <animate attributeName="width" values="0;0;356;356;0;0" keyTimes="0;0.78;0.83;0.95;0.99;1" dur="30s" repeatCount="indefinite"/>
-    </rect>
-  </clipPath>
-
-  <style>
-    .mono { font-family: 'Courier New', monospace; }
-    .sans { font-family: Arial, sans-serif; }
-  </style>
 </defs>
 
-<!-- ── Sky background ──────────────────────────────────────────── -->
-<rect width="900" height="320" fill="url(#bg)"/>
+<!-- ── Sky ─────────────────────────────────────────────────────── -->
+<rect width="900" height="310" fill="url(#bg)"/>
+<!-- gradient tint enveloping full header -->
+<rect width="900" height="310" fill="url(#topTint)"/>
 
-<!-- ── Stars (sky layer) ───────────────────────────────────────── -->
-<!-- white stars -->
-<circle cx="28"  cy="14" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.3s" repeatCount="indefinite" begin="0s"/></circle>
-<circle cx="78"  cy="30" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.8s" repeatCount="indefinite" begin=".4s"/></circle>
-<circle cx="130" cy="10" r="1.2" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="2.7s" repeatCount="indefinite" begin=".8s"/></circle>
-<circle cx="185" cy="26" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.1s" repeatCount="indefinite" begin="1.2s"/></circle>
-<circle cx="240" cy="9"  r="1.5" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="3.1s" repeatCount="indefinite" begin=".6s"/></circle>
-<circle cx="300" cy="22" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.9s" repeatCount="indefinite" begin="1.0s"/></circle>
-<circle cx="355" cy="12" r="1.1" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.5s" repeatCount="indefinite" begin=".2s"/></circle>
-<circle cx="410" cy="32" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.0s" repeatCount="indefinite" begin="1.4s"/></circle>
-<circle cx="465" cy="8"  r="1.3" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="2.8s" repeatCount="indefinite" begin=".5s"/></circle>
-<circle cx="520" cy="25" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.7s" repeatCount="indefinite" begin=".9s"/></circle>
-<circle cx="575" cy="15" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.4s" repeatCount="indefinite" begin="1.3s"/></circle>
-<circle cx="630" cy="30" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.2s" repeatCount="indefinite" begin=".1s"/></circle>
-<circle cx="685" cy="11" r="1.2" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="3.0s" repeatCount="indefinite" begin=".7s"/></circle>
-<circle cx="740" cy="28" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.8s" repeatCount="indefinite" begin="1.1s"/></circle>
-<circle cx="795" cy="14" r="1.1" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.6s" repeatCount="indefinite" begin=".3s"/></circle>
-<circle cx="850" cy="32" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.1s" repeatCount="indefinite" begin=".8s"/></circle>
-<circle cx="885" cy="18" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.9s" repeatCount="indefinite" begin="1.5s"/></circle>
-<circle cx="50"  cy="52" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.3s" repeatCount="indefinite" begin=".6s"/></circle>
-<circle cx="100" cy="68" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.9s" repeatCount="indefinite" begin="1.0s"/></circle>
-<circle cx="160" cy="55" r="1.2" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.7s" repeatCount="indefinite" begin=".4s"/></circle>
-<circle cx="215" cy="72" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.0s" repeatCount="indefinite" begin=".9s"/></circle>
-<circle cx="270" cy="60" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.5s" repeatCount="indefinite" begin="1.3s"/></circle>
-<circle cx="330" cy="78" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.7s" repeatCount="indefinite" begin=".2s"/></circle>
-<circle cx="380" cy="50" r="1.1" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="3.2s" repeatCount="indefinite" begin=".7s"/></circle>
-<circle cx="435" cy="70" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.2s" repeatCount="indefinite" begin="1.1s"/></circle>
-<circle cx="488" cy="56" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="1.8s" repeatCount="indefinite" begin=".5s"/></circle>
-<circle cx="545" cy="74" r="1.3" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="2.9s" repeatCount="indefinite" begin="0s"/></circle>
-<circle cx="598" cy="58" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.4s" repeatCount="indefinite" begin="1.4s"/></circle>
-<circle cx="652" cy="76" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.1s" repeatCount="indefinite" begin=".8s"/></circle>
-<circle cx="705" cy="52" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.6s" repeatCount="indefinite" begin=".3s"/></circle>
-<circle cx="760" cy="68" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.9s" repeatCount="indefinite" begin="1.2s"/></circle>
-<circle cx="815" cy="55" r="1.2" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.8s" repeatCount="indefinite" begin=".6s"/></circle>
-<circle cx="865" cy="72" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.3s" repeatCount="indefinite" begin="1.0s"/></circle>
-<!-- cyan stars -->
-<circle cx="92"  cy="18" r="1.5" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.5s" repeatCount="indefinite" begin=".3s"/></circle>
-<circle cx="448" cy="42" r="1.3" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="3.0s" repeatCount="indefinite" begin=".9s"/></circle>
-<circle cx="720" cy="20" r="1.5" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.2s" repeatCount="indefinite" begin="1.4s"/></circle>
-<circle cx="555" cy="62" r="1.2" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="1.9s" repeatCount="indefinite" begin=".1s"/></circle>
-<circle cx="195" cy="85" r="1"   fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.7s" repeatCount="indefinite" begin=".7s"/></circle>
-<!-- purple stars -->
-<circle cx="320" cy="18" r="1.4" fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.8s" repeatCount="indefinite" begin=".5s"/></circle>
-<circle cx="620" cy="35" r="1.2" fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.1s" repeatCount="indefinite" begin="1.1s"/></circle>
-<circle cx="835" cy="45" r="1"   fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="3.3s" repeatCount="indefinite" begin=".2s"/></circle>
-<circle cx="380" cy="75" r="1.3" fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.4s" repeatCount="indefinite" begin=".8s"/></circle>
-<!-- pink accents -->
-<circle cx="162" cy="40" r="1.2" fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.6s" repeatCount="indefinite" begin="1.3s"/></circle>
-<circle cx="490" cy="20" r="1"   fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="3.1s" repeatCount="indefinite" begin=".4s"/></circle>
-<circle cx="755" cy="58" r="1.4" fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.0s" repeatCount="indefinite" begin="1.0s"/></circle>
+<!-- ── Stars (sky layer) ──────────────────────────────────────── -->
+<circle cx="22"  cy="12" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.4s" repeatCount="indefinite" begin="0s"/></circle>
+<circle cx="75"  cy="28" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.9s" repeatCount="indefinite" begin=".4s"/></circle>
+<circle cx="128" cy="9"  r="1.3" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="2.8s" repeatCount="indefinite" begin=".8s"/></circle>
+<circle cx="183" cy="25" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.1s" repeatCount="indefinite" begin="1.2s"/></circle>
+<circle cx="238" cy="8"  r="1.5" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="3.2s" repeatCount="indefinite" begin=".6s"/></circle>
+<circle cx="292" cy="21" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.8s" repeatCount="indefinite" begin="1.0s"/></circle>
+<circle cx="347" cy="11" r="1.1" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.5s" repeatCount="indefinite" begin=".2s"/></circle>
+<circle cx="402" cy="30" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.0s" repeatCount="indefinite" begin="1.4s"/></circle>
+<circle cx="457" cy="7"  r="1.3" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="2.9s" repeatCount="indefinite" begin=".5s"/></circle>
+<circle cx="512" cy="24" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.7s" repeatCount="indefinite" begin=".9s"/></circle>
+<circle cx="567" cy="14" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.4s" repeatCount="indefinite" begin="1.3s"/></circle>
+<circle cx="622" cy="29" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.2s" repeatCount="indefinite" begin=".1s"/></circle>
+<circle cx="677" cy="10" r="1.2" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="3.0s" repeatCount="indefinite" begin=".7s"/></circle>
+<circle cx="732" cy="27" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.8s" repeatCount="indefinite" begin="1.1s"/></circle>
+<circle cx="787" cy="13" r="1.1" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.6s" repeatCount="indefinite" begin=".3s"/></circle>
+<circle cx="842" cy="31" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.1s" repeatCount="indefinite" begin=".8s"/></circle>
+<circle cx="882" cy="17" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.9s" repeatCount="indefinite" begin="1.5s"/></circle>
+<circle cx="48"  cy="50" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.3s" repeatCount="indefinite" begin=".6s"/></circle>
+<circle cx="98"  cy="65" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.9s" repeatCount="indefinite" begin="1.0s"/></circle>
+<circle cx="157" cy="54" r="1.2" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.7s" repeatCount="indefinite" begin=".4s"/></circle>
+<circle cx="212" cy="70" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.0s" repeatCount="indefinite" begin=".9s"/></circle>
+<circle cx="268" cy="58" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.5s" repeatCount="indefinite" begin="1.3s"/></circle>
+<circle cx="322" cy="76" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.7s" repeatCount="indefinite" begin=".2s"/></circle>
+<circle cx="378" cy="48" r="1.1" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="3.1s" repeatCount="indefinite" begin=".7s"/></circle>
+<circle cx="432" cy="68" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.2s" repeatCount="indefinite" begin="1.1s"/></circle>
+<circle cx="487" cy="55" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="1.8s" repeatCount="indefinite" begin=".5s"/></circle>
+<circle cx="542" cy="72" r="1.3" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;1;0"  dur="2.9s" repeatCount="indefinite" begin="0s"/></circle>
+<circle cx="596" cy="57" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.4s" repeatCount="indefinite" begin="1.4s"/></circle>
+<circle cx="651" cy="74" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.1s" repeatCount="indefinite" begin=".8s"/></circle>
+<circle cx="706" cy="51" r=".9"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.6s" repeatCount="indefinite" begin=".3s"/></circle>
+<circle cx="762" cy="67" r=".7"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="1.9s" repeatCount="indefinite" begin="1.2s"/></circle>
+<circle cx="816" cy="53" r="1.2" fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.8s" repeatCount="indefinite" begin=".6s"/></circle>
+<circle cx="863" cy="71" r=".8"  fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.3s" repeatCount="indefinite" begin="1.0s"/></circle>
+<!-- coloured accent stars -->
+<circle cx="90"  cy="17" r="1.5" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.5s" repeatCount="indefinite" begin=".3s"/></circle>
+<circle cx="442" cy="40" r="1.3" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="3.0s" repeatCount="indefinite" begin=".9s"/></circle>
+<circle cx="716" cy="19" r="1.5" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.2s" repeatCount="indefinite" begin="1.4s"/></circle>
+<circle cx="318" cy="17" r="1.4" fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.8s" repeatCount="indefinite" begin=".5s"/></circle>
+<circle cx="618" cy="34" r="1.2" fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.8;0" dur="2.1s" repeatCount="indefinite" begin="1.1s"/></circle>
+<circle cx="163" cy="39" r="1.2" fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.6s" repeatCount="indefinite" begin="1.3s"/></circle>
+<circle cx="490" cy="19" r="1"   fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="3.1s" repeatCount="indefinite" begin=".4s"/></circle>
+<circle cx="752" cy="57" r="1.4" fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.0s" repeatCount="indefinite" begin="1.0s"/></circle>
 
-<!-- ── Terminal: name command ───────────────────────────────────── -->
-<!-- prompt >_ appears first -->
-<text x="40" y="83" class="mono" font-size="42" font-weight="700" fill="#00D9FF" opacity="0">
+<!-- ── Terminal: name line ─────────────────────────────────────── -->
+<!-- prompt: fades in on load -->
+<text x="40" y="82" font-family="Courier New,monospace" font-size="42" font-weight="700" fill="#00D9FF" opacity="0">
   &gt;_
-  <animate attributeName="opacity" values="0;1;1" keyTimes="0;0.013;1" dur="30s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="0.1s" repeatCount="1" fill="freeze"/>
 </text>
 
-<!-- name types in after prompt -->
+<!-- name typing -->
 <g clip-path="url(#nm)">
-  <text x="115" y="83" class="sans" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="3">VITOR ALVES SANTOS</text>
+  <text x="115" y="82" font-family="Arial,sans-serif" font-size="42" font-weight="900" letter-spacing="3" fill="#ffffff">VITOR ALVES SANTOS</text>
 </g>
 
 <!-- name cursor -->
-<g>
-  <animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.012;0.013;0.11;0.12;1" dur="30s" repeatCount="indefinite"/>
-  <rect y="56" width="10" height="28" rx="2" fill="#00D9FF">
-    <animate attributeName="x" values="115;115;685;685" keyTimes="0;0.013;0.087;1" dur="30s" repeatCount="indefinite"/>
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="0.4s" repeatCount="1" fill="freeze"/>
+  <animate attributeName="opacity" from="1" to="0" dur="0.3s" begin="4.0s" repeatCount="1" fill="freeze"/>
+  <rect y="54" width="11" height="30" rx="2" fill="#00D9FF">
+    <animate attributeName="x" from="115" to="688" dur="2s" begin="0.4s" repeatCount="1" fill="freeze"/>
     <animate attributeName="opacity" values="1;0" dur="0.8s" repeatCount="indefinite" calcMode="discrete"/>
   </rect>
 </g>
 
-<!-- ── Subtitle ─────────────────────────────────────────────────── -->
-<g clip-path="url(#sm)">
-  <text x="450" y="112" class="sans" font-size="12" letter-spacing="3.5" fill="#ffffff" fill-opacity=".5" text-anchor="middle">FULLSTACK ENGINEER · UI SYSTEMS · CREATIVE DEV</text>
+<!-- Return / Enter key box — appears after name is typed -->
+<g opacity="0">
+  <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="2.7s" repeatCount="1" fill="freeze"/>
+  <rect x="696" y="56" width="46" height="28" rx="4" fill="#0f1623" stroke="#00D9FF" stroke-width="1.5">
+    <!-- flash on click -->
+    <animate attributeName="fill"   values="#0f1623;#00D9FF;#0f1623" dur="0.22s" begin="4.5s" repeatCount="1" fill="freeze"/>
+    <animate attributeName="stroke" values="#00D9FF;#fff;#00D9FF"   dur="0.22s" begin="4.5s" repeatCount="1" fill="freeze"/>
+  </rect>
+  <text x="719" y="75" font-family="Arial,sans-serif" font-size="15" fill="#00D9FF" text-anchor="middle">&#9166;</text>
 </g>
 
-<!-- ── Tech stack (ordered by dev use) ─────────────────────────── -->
-<g clip-path="url(#t1m)">
-  <text x="450" y="147" class="mono" font-size="13" fill="#00D9FF" fill-opacity=".9" text-anchor="middle">TypeScript · React · Next.js · Tailwind · Node.js · Express</text>
+<!-- Mouse cursor (SVG arrow pointer) — enters from right, clicks Return, exits -->
+<g transform="translate(890,55)" opacity="0">
+  <!-- move into frame -->
+  <animateTransform attributeName="transform" type="translate"
+    from="890,55" to="702,60"
+    dur="1.3s" begin="3.0s" repeatCount="1" fill="freeze"/>
+  <!-- fade in when it enters -->
+  <animate attributeName="opacity" from="0" to="1" dur="0.15s" begin="3.0s" repeatCount="1" fill="freeze"/>
+  <!-- click nudge down -->
+  <animateTransform attributeName="transform" type="translate" additive="sum"
+    values="0,0;0,3;0,0" keyTimes="0;0.5;1"
+    dur="0.18s" begin="4.48s" repeatCount="1" fill="freeze"/>
+  <!-- fade out after click -->
+  <animate attributeName="opacity" from="1" to="0" dur="0.4s" begin="5.0s" repeatCount="1" fill="freeze"/>
+  <polygon points="0,0 0,22 6,16 10,27 14,25 10,14 18,14"
+    fill="white" stroke="#111" stroke-width="1.2" stroke-linejoin="round"
+    filter="url(#cshadow)"/>
 </g>
-<g clip-path="url(#t2m)">
-  <text x="450" y="169" class="mono" font-size="13" fill="#7B2FF7" fill-opacity=".95" text-anchor="middle">PostgreSQL · Prisma · Redis · Python · OpenAI · Docker · Expo</text>
+
+<!-- ── Subtitle (twinkling filter after reveal) ────────────────── -->
+<g clip-path="url(#sm)">
+  <text x="450" y="114" font-family="Arial,sans-serif" font-size="12" letter-spacing="3.5"
+    fill="#ffffff" fill-opacity=".65" text-anchor="middle"
+    filter="url(#subtitleTwinkle)">
+    FULLSTACK ENGINEER · UI SYSTEMS · CREATIVE DEV
+  </text>
+</g>
+
+<!-- ── Tech badges with embedded icons ────────────────────────── -->
+<!-- Row 1: TypeScript React Next.js Tailwind Node.js -->
+<!-- Badge 1 – TypeScript #3178C6 -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="7.0s" repeatCount="1" fill="freeze"/>
+  <rect x="205" y="130" width="90" height="24" rx="3" fill="#3178C6"/>
+  <g transform="translate(209,134) scale(0.667)"><path fill="white" fill-rule="evenodd" d="M1.125 0C.502 0 0 .502 0 1.125v21.75C0 23.498.502 24 1.125 24h21.75c.623 0 1.125-.502 1.125-1.125V1.125C24 .502 23.498 0 22.875 0zm17.363 9.75c.612 0 1.154.037 1.627.111a6.38 6.38 0 0 1 1.306.34v2.458a3.95 3.95 0 0 0-.643-.361 5.093 5.093 0 0 0-.717-.26 5.453 5.453 0 0 0-1.426-.2c-.3 0-.573.028-.819.086a2.1 2.1 0 0 0-.623.242c-.17.104-.3.229-.393.374a.888.888 0 0 0-.14.49c0 .196.053.373.156.529.104.156.252.304.443.444s.423.276.696.41c.273.135.582.274.926.416.47.197.892.407 1.266.628.374.222.695.473.963.753.268.279.472.598.614.957.142.359.214.776.214 1.253 0 .657-.125 1.21-.373 1.656a3.033 3.033 0 0 1-1.012 1.085 4.38 4.38 0 0 1-1.487.596c-.566.12-1.163.18-1.79.18a9.916 9.916 0 0 1-1.84-.164 5.544 5.544 0 0 1-1.512-.493v-2.63a5.033 5.033 0 0 0 3.237 1.2c.333 0 .624-.03.872-.09.249-.06.456-.144.623-.25.166-.108.29-.234.373-.38a1.023 1.023 0 0 0-.074-1.089 2.12 2.12 0 0 0-.537-.5 5.597 5.597 0 0 0-.807-.444 27.72 27.72 0 0 0-1.007-.436c-.918-.383-1.602-.852-2.053-1.405-.45-.553-.676-1.222-.676-2.005 0-.614.123-1.141.369-1.582.246-.441.58-.804 1.004-1.089a4.494 4.494 0 0 1 1.47-.629 7.536 7.536 0 0 1 1.77-.201zm-15.113.188h9.563v2.166H9.506v9.646H6.789v-9.646H3.375z"/></g>
+  <text x="230" y="146" font-family="Arial,sans-serif" font-size="10.5" fill="white">TypeScript</text>
+</g>
+<!-- Badge 2 – React #20232A -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="7.2s" repeatCount="1" fill="freeze"/>
+  <rect x="305" y="130" width="90" height="24" rx="3" fill="#1a2535"/>
+  <g transform="translate(309,134) scale(0.667)"><path fill="#61DAFB" d="M14.23 12.004a2.236 2.236 0 0 1-2.235 2.236 2.236 2.236 0 0 1-2.236-2.236 2.236 2.236 0 0 1 2.235-2.236 2.236 2.236 0 0 1 2.236 2.236zm2.648-10.69c-1.346 0-3.107.96-4.888 2.622-1.78-1.653-3.542-2.602-4.887-2.602-.41 0-.783.093-1.106.278-1.375.793-1.683 3.264-.973 6.365C1.98 8.917 0 10.42 0 12.004c0 1.59 1.99 3.097 5.043 4.03-.704 3.113-.39 5.588.988 6.38.32.187.69.275 1.102.275 1.345 0 3.107-.96 4.888-2.624 1.78 1.654 3.542 2.603 4.887 2.603.41 0 .783-.09 1.106-.275 1.374-.792 1.683-3.263.973-6.365C22.02 15.096 24 13.59 24 12.004c0-1.59-1.99-3.097-5.043-4.032.704-3.11.39-5.587-.988-6.38-.318-.184-.688-.277-1.092-.278zm-.005 1.09v.006c.225 0 .406.044.558.127.666.382.955 1.835.73 3.704-.054.46-.142.945-.25 1.44-.96-.236-2.006-.417-3.107-.534-.66-.905-1.345-1.727-2.035-2.447 1.592-1.48 3.087-2.292 4.105-2.295zm-9.77.02c1.012 0 2.514.808 4.11 2.28-.686.72-1.37 1.537-2.02 2.442-1.107.117-2.154.298-3.113.538-.112-.49-.195-.964-.254-1.42-.23-1.868.054-3.32.714-3.707.19-.09.4-.127.563-.132zm4.882 3.05c.455.468.91.992 1.36 1.564-.44-.02-.89-.034-1.345-.034-.46 0-.915.01-1.36.034.44-.572.895-1.096 1.345-1.565zM12 8.1c.74 0 1.477.034 2.202.093.406.582.802 1.203 1.183 1.86.372.64.71 1.29 1.018 1.946-.308.655-.646 1.31-1.013 1.95-.38.66-.773 1.288-1.18 1.87-.728.063-1.466.098-2.21.098-.74 0-1.477-.035-2.202-.093-.406-.582-.802-1.204-1.183-1.86-.372-.64-.71-1.29-1.018-1.946.303-.657.646-1.313 1.013-1.954.38-.66.773-1.286 1.18-1.868.728-.064 1.466-.098 2.21-.098zm-3.635.254c-.24.377-.48.763-.704 1.16-.225.39-.435.782-.635 1.174-.265-.656-.49-1.31-.676-1.947.64-.15 1.315-.283 2.015-.386zm7.26 0c.695.103 1.365.23 2.006.387-.18.632-.405 1.282-.66 1.933-.2-.39-.41-.783-.64-1.174-.225-.392-.465-.774-.705-1.146zm3.063.675c.484.15.944.317 1.375.498 1.732.74 2.852 1.708 2.852 2.476-.005.768-1.125 1.74-2.857 2.475-.42.18-.88.342-1.355.493-.28-.958-.646-1.956-1.1-2.98.45-1.017.81-2.01 1.085-2.964zm-13.395.004c.278.96.645 1.957 1.1 2.98-.45 1.017-.812 2.01-1.086 2.964-.484-.15-.944-.318-1.37-.5-1.732-.737-2.852-1.706-2.852-2.474 0-.768 1.12-1.742 2.852-2.476.42-.18.88-.342 1.356-.494zm11.678 4.28c.265.657.49 1.312.676 1.948-.64.157-1.316.29-2.016.39.24-.375.48-.762.705-1.158.225-.39.435-.788.636-1.18zm-9.945.02c.2.392.41.783.64 1.175.23.39.465.772.705 1.143-.695-.102-1.365-.23-2.006-.386.18-.63.406-1.282.66-1.933zM17.92 16.32c.112.493.2.968.254 1.423.23 1.868-.054 3.32-.714 3.708-.147.09-.338.128-.563.128-1.012 0-2.514-.807-4.11-2.28.686-.72 1.37-1.536 2.02-2.44 1.107-.118 2.154-.3 3.113-.54zm-11.83.01c.96.234 2.006.415 3.107.532.66.905 1.345 1.727 2.035 2.446-1.595 1.483-3.092 2.295-4.11 2.295-.22-.005-.406-.05-.553-.132-.666-.38-.955-1.834-.73-3.703.054-.46.142-.944.25-1.438zm4.56.64c.44.02.89.034 1.345.034.46 0 .915-.01 1.36-.034-.44.572-.895 1.095-1.345 1.565-.455-.47-.91-.993-1.36-1.565z"/></g>
+  <text x="330" y="146" font-family="Arial,sans-serif" font-size="10.5" fill="white">React</text>
+</g>
+<!-- Badge 3 – Next.js #111 -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="7.4s" repeatCount="1" fill="freeze"/>
+  <rect x="405" y="130" width="90" height="24" rx="3" fill="#111"/>
+  <g transform="translate(409,134) scale(0.667)"><path fill="white" d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/></g>
+  <text x="430" y="146" font-family="Arial,sans-serif" font-size="10.5" fill="white">Next.js</text>
+</g>
+<!-- Badge 4 – Tailwind #0891B2 -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="7.6s" repeatCount="1" fill="freeze"/>
+  <rect x="505" y="130" width="90" height="24" rx="3" fill="#0891B2"/>
+  <g transform="translate(509,134) scale(0.667)"><path fill="white" d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624C10.337,13.382,8.976,12,6.001,12z"/></g>
+  <text x="530" y="146" font-family="Arial,sans-serif" font-size="10.5" fill="white">Tailwind</text>
+</g>
+<!-- Badge 5 – Node.js #215732 -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="7.8s" repeatCount="1" fill="freeze"/>
+  <rect x="605" y="130" width="90" height="24" rx="3" fill="#215732"/>
+  <g transform="translate(609,134) scale(0.667)"><path fill="white" d="M11.998,24c-0.321,0-0.641-0.084-0.922-0.247l-2.936-1.737c-0.438-0.245-0.224-0.332-0.08-0.383c0.585-0.203,0.703-0.25,1.328-0.604c0.065-0.037,0.151-0.023,0.218,0.017l2.256,1.339c0.082,0.045,0.197,0.045,0.272,0l8.795-5.076c0.082-0.047,0.134-0.141,0.134-0.238V6.921c0-0.099-0.053-0.192-0.137-0.242l-8.791-5.072c-0.081-0.047-0.189-0.047-0.271,0L3.075,6.68C2.99,6.729,2.936,6.825,2.936,6.921v10.15c0,0.097,0.054,0.189,0.139,0.235l2.409,1.392c1.307,0.654,2.108-0.116,2.108-0.89V7.787c0-0.142,0.114-0.253,0.256-0.253h1.115c0.139,0,0.255,0.112,0.255,0.253v10.021c0,1.745-0.95,2.745-2.604,2.745c-0.508,0-0.909,0-2.026-0.551L2.28,18.675c-0.57-0.329-0.922-0.945-0.922-1.604V6.921c0-0.659,0.353-1.275,0.922-1.603l8.795-5.082c0.557-0.315,1.296-0.315,1.848,0l8.794,5.082c0.57,0.329,0.924,0.944,0.924,1.603v10.15c0,0.659-0.354,1.273-0.924,1.604l-8.794,5.078C12.643,23.916,12.324,24,11.998,24z M19.099,13.993c0-1.9-1.284-2.406-3.987-2.763c-2.731-0.361-3.009-0.548-3.009-1.187c0-0.528,0.235-1.233,2.258-1.233c1.807,0,2.473,0.389,2.747,1.607c0.024,0.115,0.129,0.199,0.247,0.199h1.141c0.071,0,0.138-0.031,0.186-0.081c0.048-0.054,0.074-0.123,0.067-0.196c-0.177-2.098-1.571-3.076-4.388-3.076c-2.508,0-4.004,1.058-4.004,2.833c0,1.925,1.488,2.457,3.895,2.695c2.88,0.282,3.103,0.703,3.103,1.269c0,0.983-0.789,1.402-2.642,1.402c-2.327,0-2.839-0.584-3.011-1.742c-0.02-0.124-0.126-0.215-0.253-0.215h-1.137c-0.141,0-0.254,0.112-0.254,0.253c0,1.482,0.806,3.248,4.655,3.248C17.501,17.007,19.099,15.91,19.099,13.993z"/></g>
+  <text x="630" y="146" font-family="Arial,sans-serif" font-size="10.5" fill="white">Node.js</text>
+</g>
+<!-- Row 2: PostgreSQL Prisma Python Docker OpenAI -->
+<!-- Badge 6 – PostgreSQL #336791 -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="8.1s" repeatCount="1" fill="freeze"/>
+  <rect x="205" y="162" width="90" height="24" rx="3" fill="#336791"/>
+  <g transform="translate(209,166) scale(0.667)"><path fill="white" d="M23.5594 14.7228a.5269.5269 0 0 0-.0563-.1191c-.139-.2632-.4768-.3418-1.0074-.2321-1.6533.3411-2.2935.1312-2.5256-.0191 1.342-2.0482 2.445-4.522 3.0411-6.8297.2714-1.0507.7982-3.5237.1222-4.7316a1.5641 1.5641 0 0 0-.1509-.235C21.6931.9086 19.8007.0248 17.5099.0005c-1.4947-.0158-2.7705.3461-3.1161.4794a9.449 9.449 0 0 0-.5159-.0816 8.044 8.044 0 0 0-1.3114-.1278c-1.1822-.0184-2.2038.2642-3.0498.8406-.8573-.3211-4.7888-1.645-7.2219.0788C.9359 2.1526.3086 3.8733.4302 6.3043c.0409.818.5069 3.334 1.2423 5.7436.4598 1.5065.9387 2.7019 1.4334 3.582.553.9942 1.1259 1.5933 1.7143 1.7895.4474.1491 1.1327.1441 1.8581-.7279.8012-.9635 1.5903-1.8258 1.9446-2.2069.4351.2355.9064.3625 1.39.3772a.0569.0569 0 0 0 .0004.0041 11.0312 11.0312 0 0 0-.2472.3054c-.3389.4302-.4094.5197-1.5002.7443-.3102.064-1.1344.2339-1.1464.8115-.0025.1224.0329.2309.0919.3268.2269.4231.9216.6097 1.015.6331 1.3345.3335 2.5044.092 3.3714-.6787-.017 2.231.0775 4.4174.3454 5.0874.2212.5529.7618 1.9045 2.4692 1.9043.2505 0 .5263-.0291.8296-.0941 1.7819-.3821 2.5557-1.1696 2.855-2.9059.1503-.8707.4016-2.8753.5388-4.1012.0169-.0703.0357-.1207.057-.1362.0007-.0005.0697-.0471.4272.0307a.3673.3673 0 0 0 .0443.0068l.2539.0223.0149.001c.8468.0384 1.9114-.1426 2.5312-.4308.6438-.2988 1.8057-1.0323 1.5951-1.6698z"/></g>
+  <text x="230" y="178" font-family="Arial,sans-serif" font-size="10.5" fill="white">PostgreSQL</text>
+</g>
+<!-- Badge 7 – Prisma #2D3748 -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="8.3s" repeatCount="1" fill="freeze"/>
+  <rect x="305" y="162" width="90" height="24" rx="3" fill="#2D3748"/>
+  <g transform="translate(309,166) scale(0.667)"><path fill="white" d="M21.8068 18.2848L13.5528.7565c-.207-.4382-.639-.7273-1.1286-.7541-.5023-.0293-.9523.213-1.2062.6253L2.266 15.1271c-.2773.4518-.2718 1.0091.0158 1.4555l4.3759 6.7786c.2608.4046.7127.6388 1.1823.6388.1332 0 .267-.0188.3987-.0577l12.7019-3.7568c.3891-.1151.7072-.3904.8737-.7553s.1633-.7828-.0075-1.1454zm-1.8481.7519L9.1814 22.2242c-.3292.0975-.6448-.1873-.5756-.5194l3.8501-18.4386c.072-.3448.5486-.3996.699-.0803l7.1288 15.138c.1344.2856-.019.6224-.325.7128z"/></g>
+  <text x="330" y="178" font-family="Arial,sans-serif" font-size="10.5" fill="white">Prisma</text>
+</g>
+<!-- Badge 8 – Python #3776AB -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="8.5s" repeatCount="1" fill="freeze"/>
+  <rect x="405" y="162" width="90" height="24" rx="3" fill="#3776AB"/>
+  <g transform="translate(409,166) scale(0.667)"><path fill="white" d="M14.25.18l.9.2.73.26.59.3.45.32.34.34.25.34.16.33.1.3.04.26.02.2-.01.13V8.5l-.05.63-.13.55-.21.46-.26.38-.3.31-.33.25-.35.19-.35.14-.33.1-.3.07-.26.04-.21.02H8.77l-.69.05-.59.14-.5.22-.41.27-.33.32-.27.35-.2.36-.15.37-.1.35-.07.32-.04.27-.02.21v3.06H3.17l-.21-.03-.28-.07-.32-.12-.35-.18-.36-.26-.36-.36-.35-.46-.32-.59-.28-.73-.21-.88-.14-1.05-.05-1.23.06-1.22.16-1.04.24-.87.32-.71.36-.57.4-.44.42-.33.42-.24.4-.16.36-.1.32-.05.24-.01h.16l.06.01h8.16v-.83H6.18l-.01-2.75-.02-.37.05-.34.11-.31.17-.28.25-.26.31-.23.38-.2.44-.18.51-.15.58-.12.64-.1.71-.06.77-.04.84-.02 1.27.05zm-6.3 1.98l-.23.33-.08.41.08.41.23.34.33.22.41.09.41-.09.33-.22.23-.34.08-.41-.08-.41-.23-.33-.33-.22-.41-.09-.41.09zm13.09 3.95l.28.06.32.12.35.18.36.27.36.35.35.47.32.59.28.73.21.88.14 1.04.05 1.23-.06 1.23-.16 1.04-.24.86-.32.71-.36.57-.4.45-.42.33-.42.24-.4.16-.36.09-.32.05-.24.02-.16-.01h-8.22v.82h5.84l.01 2.76.02.36-.05.34-.11.31-.17.29-.25.25-.31.24-.38.2-.44.17-.51.15-.58.13-.64.09-.71.07-.77.04-.84.01-1.27-.04-1.07-.14-.9-.2-.73-.25-.59-.3-.45-.33-.34-.34-.25-.34-.16-.33-.1-.3-.04-.25-.02-.2.01-.13v-5.34l.05-.64.13-.54.21-.46.26-.38.3-.32.33-.24.35-.2.35-.14.33-.1.3-.06.26-.04.21-.02.13-.01h5.84l.69-.05.59-.14.5-.21.41-.28.33-.32.27-.35.2-.36.15-.36.1-.35.07-.32.04-.28.02-.21V6.07h2.09l.14.01zm-6.47 14.25l-.23.33-.08.41.08.41.23.33.33.23.41.08.41-.08.33-.23.23-.33.08-.41-.08-.41-.23-.33-.33-.23-.41-.08-.41.08z"/></g>
+  <text x="430" y="178" font-family="Arial,sans-serif" font-size="10.5" fill="white">Python</text>
+</g>
+<!-- Badge 9 – Docker #2496ED -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="8.7s" repeatCount="1" fill="freeze"/>
+  <rect x="505" y="162" width="90" height="24" rx="3" fill="#1a5fad"/>
+  <g transform="translate(509,166) scale(0.667)"><path fill="white" d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.185v1.888c0 .102.083.185.185.185m-2.954-5.43h2.118a.186.186 0 00.186-.186V3.574a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m0 2.716h2.118a.187.187 0 00.186-.186V6.29a.186.186 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.082.185.185.186m-2.93 0h2.12a.186.186 0 00.184-.186V6.29a.185.185 0 00-.185-.185H8.1a.185.185 0 00-.185.185v1.887c0 .102.083.185.185.186m-2.964 0h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.136a.186.186 0 00-.186.185v1.887c0 .102.084.185.186.186m5.893 2.715h2.118a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.118a.185.185 0 00-.185.185v1.888c0 .102.082.185.185.185m-2.93 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.083.185.185.185m-2.964 0h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.184-.186h-2.12a.186.186 0 00-.186.186v1.887c0 .102.084.185.186.185m-2.92 0h2.12a.185.185 0 00.184-.185V9.006a.185.185 0 00-.184-.186h-2.12a.185.185 0 00-.184.185v1.888c0 .102.082.185.185.185M23.763 9.89c-.065-.051-.672-.51-1.954-.51-.338.001-.676.03-1.01.087-.248-1.7-1.653-2.53-1.716-2.566l-.344-.199-.226.327c-.284.438-.49.922-.612 1.43-.23.97-.09 1.882.403 2.661-.595.332-1.55.413-1.744.42H.751a.751.751 0 00-.75.748 11.376 11.376 0 00.692 4.062c.545 1.428 1.355 2.48 2.41 3.124 1.18.723 3.1 1.137 5.275 1.137.983.003 1.963-.086 2.93-.266a12.248 12.248 0 003.823-1.389c.98-.567 1.86-1.288 2.61-2.136 1.252-1.418 1.998-2.997 2.553-4.4h.221c1.372 0 2.215-.549 2.68-1.009.309-.293.55-.65.707-1.046l.098-.288Z"/></g>
+  <text x="530" y="178" font-family="Arial,sans-serif" font-size="10.5" fill="white">Docker</text>
+</g>
+<!-- Badge 10 – OpenAI #10A37F -->
+<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="8.9s" repeatCount="1" fill="freeze"/>
+  <rect x="605" y="162" width="90" height="24" rx="3" fill="#10a37f"/>
+  <!-- OpenAI not in Simple Icons — draw a simple brain/spark mark -->
+  <text x="617" y="178" font-family="Courier New,monospace" font-size="13" font-weight="700" fill="white">AI</text>
+  <text x="648" y="178" font-family="Arial,sans-serif" font-size="10.5" fill="white">OpenAI</text>
 </g>
 
 <!-- ── Cycling terminal phrases ─────────────────────────────────── -->
-<!-- prompt always visible after intro -->
-<text x="175" y="217" class="mono" font-size="18" fill="#00D9FF" opacity="0">
+<text x="175" y="213" font-family="Courier New,monospace" font-size="18" fill="#00D9FF" opacity="0">
   &gt;_
-  <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.28;0.30;1" dur="30s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="9.0s" repeatCount="1" fill="freeze"/>
 </text>
-
-<g clip-path="url(#p1)">
-  <text x="215" y="217" class="mono" font-size="18" fill="#ffffff">Developer // React · TypeScript · Next.js</text>
-</g>
-<g clip-path="url(#p2)">
-  <text x="215" y="217" class="mono" font-size="18" fill="#ffffff">Building interfaces that feel inevitable</text>
-</g>
-<g clip-path="url(#p3)">
-  <text x="215" y="217" class="mono" font-size="18" fill="#ffffff">Pixel-perfect, fast &amp; intentional</text>
-</g>
+<g clip-path="url(#p1)"><text x="215" y="213" font-family="Courier New,monospace" font-size="18" fill="#fff">Developer // React · TypeScript · Next.js</text></g>
+<g clip-path="url(#p2)"><text x="215" y="213" font-family="Courier New,monospace" font-size="18" fill="#fff">Building interfaces that feel inevitable</text></g>
+<g clip-path="url(#p3)"><text x="215" y="213" font-family="Courier New,monospace" font-size="18" fill="#fff">TypeScript · Next.js · Node · PostgreSQL</text></g>
+<g clip-path="url(#p4)"><text x="215" y="213" font-family="Courier New,monospace" font-size="18" fill="#fff">Pixel-perfect, fast &amp; intentional</text></g>
+<g clip-path="url(#p5)"><text x="215" y="213" font-family="Courier New,monospace" font-size="18" fill="#fff">From design to deployment — ship it</text></g>
+<g clip-path="url(#p6)"><text x="215" y="213" font-family="Courier New,monospace" font-size="18" fill="#fff">Always shipping, always learning</text></g>
+<g clip-path="url(#p7)"><text x="215" y="213" font-family="Courier New,monospace" font-size="18" fill="#fff">Clean code is a love language</text></g>
 
 <!-- phrase cursor -->
 <g>
-  <animate attributeName="opacity" values="0;0;1;1;0;0;1;1;0;0;1;1;0" keyTimes="0;0.299;0.30;0.54;0.541;0.549;0.55;0.77;0.771;0.779;0.78;0.99;1" dur="30s" repeatCount="indefinite"/>
-  <rect y="199" width="10" height="20" rx="2" fill="#00D9FF">
-    <animate attributeName="x" values="215;215;658;658;215;215;647;647;215;215;571;571;215;215" keyTimes="0;0.30;0.35;0.50;0.54;0.55;0.60;0.73;0.77;0.78;0.83;0.95;0.99;1" dur="30s" repeatCount="indefinite"/>
+  <animate attributeName="opacity" values="1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0;1;1;0;0"
+    keyTimes="0;0.133;0.134;0.142;0.143;0.276;0.277;0.285;0.286;0.418;0.419;0.428;0.429;0.561;0.562;0.570;0.571;0.704;0.705;0.713;0.714;0.847;0.848;0.856;0.857;0.990;0.991;1"
+    dur="49s" begin="9.5s" repeatCount="indefinite"/>
+  <rect y="195" width="11" height="21" rx="2" fill="#00D9FF">
+    <animate attributeName="x"
+      values="215;660;660;215;215;647;647;215;215;647;647;215;215;570;570;215;215;595;595;215;215;560;560;215;215;535;535;215"
+      keyTimes="0;0.031;0.112;0.133;0.143;0.173;0.255;0.276;0.286;0.316;0.398;0.418;0.429;0.459;0.541;0.561;0.571;0.602;0.684;0.704;0.714;0.745;0.827;0.847;0.857;0.888;0.969;1"
+      dur="49s" begin="9.5s" repeatCount="indefinite"/>
     <animate attributeName="opacity" values="1;0" dur="0.9s" repeatCount="indefinite" calcMode="discrete"/>
   </rect>
 </g>
 
-<!-- ── Waves (3 layers, y≥230) ──────────────────────────────────── -->
-
-<!-- wave 3 — faint glow, slowest -->
-<path fill="url(#wg)" fill-opacity=".18" filter="url(#softglow)">
+<!-- ── Waves (3 layers at bottom, facing content below) ────────── -->
+<!-- wave 3 faint glow -->
+<path fill="url(#ng)" fill-opacity=".18" filter="url(#softglow)">
   <animate attributeName="d" dur="14s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"
     values="
-      M0,255 C180,230 360,270 540,250 C720,232 840,262 900,248 L900,320 L0,320 Z;
-      M0,245 C150,268 340,232 520,256 C700,272 840,238 900,258 L900,320 L0,320 Z;
-      M0,255 C180,230 360,270 540,250 C720,232 840,262 900,248 L900,320 L0,320 Z
+      M0,253 C200,238 360,263 540,250 C720,239 840,258 900,252 L900,310 L0,310 Z;
+      M0,246 C180,264 350,240 530,256 C710,268 840,244 900,258 L900,310 L0,310 Z;
+      M0,253 C200,238 360,263 540,250 C720,239 840,258 900,252 L900,310 L0,310 Z
     "/>
 </path>
-
-<!-- wave 2 — secondary, medium speed -->
-<path fill="url(#wg)" fill-opacity=".40" filter="url(#glow)">
+<!-- wave 2 secondary -->
+<path fill="url(#ng)" fill-opacity=".40" filter="url(#glow)">
   <animate attributeName="d" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"
     values="
-      M0,260 C150,235 320,278 500,255 C680,235 820,268 900,252 L900,320 L0,320 Z;
-      M0,248 C170,272 360,230 540,260 C720,278 855,240 900,262 L900,320 L0,320 Z;
-      M0,260 C150,235 320,278 500,255 C680,235 820,268 900,252 L900,320 L0,320 Z
+      M0,258 C160,240 325,265 505,252 C685,241 828,262 900,255 L900,310 L0,310 Z;
+      M0,250 C172,268 345,242 522,260 C699,272 835,248 900,262 L900,310 L0,310 Z;
+      M0,258 C160,240 325,265 505,252 C685,241 828,262 900,255 L900,310 L0,310 Z
     "/>
 </path>
-
-<!-- wave 1 — main, fastest, most dramatic -->
-<path fill="url(#wg)" fill-opacity=".92">
-  <animate attributeName="d" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"
+<!-- wave 1 main — most dramatic, fastest -->
+<path fill="url(#ng)" fill-opacity=".93">
+  <animate attributeName="d" dur="7s" repeatCount="indefinite" calcMode="spline"
+    keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"
     values="
-      M0,268 C160,242 300,285 460,265 C620,247 780,275 900,260 L900,320 L0,320 Z;
-      M0,255 C140,278 300,240 480,268 C660,288 810,252 900,272 L900,320 L0,320 Z;
-      M0,272 C180,248 340,282 510,260 C680,242 830,268 900,256 L900,320 L0,320 Z;
-      M0,260 C155,282 315,245 490,270 C665,285 820,255 900,265 L900,320 L0,320 Z;
-      M0,268 C160,242 300,285 460,265 C620,247 780,275 900,260 L900,320 L0,320 Z
+      M0,264 C165,246 308,270 470,257 C632,245 785,266 900,258 L900,310 L0,310 Z;
+      M0,256 C145,274 308,248 490,266 C672,280 818,254 900,270 L900,310 L0,310 Z;
+      M0,268 C182,250 344,272 514,256 C684,243 836,264 900,252 L900,310 L0,310 Z;
+      M0,260 C158,278 318,250 496,268 C674,280 825,256 900,265 L900,310 L0,310 Z;
+      M0,264 C165,246 308,270 470,257 C632,245 785,266 900,258 L900,310 L0,310 Z
     "/>
 </path>
 

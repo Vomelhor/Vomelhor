@@ -2,10 +2,6 @@
 
 ![Header — VITOR ALVES SANTOS with animated cycling subtitles](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/header.svg)
 
-![Tech stack icons](https://skillicons.dev/icons?i=ts,react,nextjs,tailwind,nodejs,express,postgres,prisma,redis,python,docker,aws,firebase,supabase,expo,git,github,vscode,figma,js&theme=dark&perline=10)
-
-<br/>
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake.svg" />
