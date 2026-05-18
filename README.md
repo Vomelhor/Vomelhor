@@ -2,7 +2,7 @@
 
 ![Header — VITOR ALVES SANTOS with animated cycling subtitles](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/header.svg)
 
-![Tech stack: React · Next.js · TypeScript · JavaScript · HTML · CSS · Tailwind · Vite · Node.js · PostgreSQL · Firebase · Supabase · Git · GitHub · VS Code · Figma · npm · yarn](https://skillicons.dev/icons?i=react,nextjs,ts,js,html,css,tailwind,vite,nodejs,postgres,firebase,supabase,git,github,vscode,figma,npm,yarn&theme=dark&perline=9)
+![Tech stack: React · Next.js · TypeScript · JavaScript · HTML · CSS · Tailwind · Vite · Node.js · PostgreSQL · Firebase · Supabase · Git · GitHub · VS Code · Figma · Slack · Docker · npm · yarn](https://skillicons.dev/icons?i=react,nextjs,ts,js,html,css,tailwind,vite,nodejs,postgres,firebase,supabase,git,github,vscode,figma,slack,docker,npm,yarn&theme=dark&perline=10)
 
 <br/>
 
@@ -14,23 +14,17 @@
 
 <br/>
 
-![vomelhor.github.io — Personal Portfolio](https://capsule-render.vercel.app/api?type=soft&color=0D1117&height=90&text=vomelhor.github.io&fontSize=28&fontColor=00D9FF&desc=Personal+Portfolio+%2F%2F+JavaScript&descSize=15&descColor=c9d1d9)
+![Personal Portfolio — vomelhor.github.io](https://capsule-render.vercel.app/api?type=soft&color=0D1117&height=90&text=Personal+Portfolio&fontSize=28&fontColor=00D9FF&desc=vomelhor.github.io+%2F%2F+JavaScript&descSize=15&descColor=c9d1d9)
 
 <br/>
 
-[![🌐 Visit Live Site →](https://img.shields.io/badge/%F0%9F%8C%90%20Visit%20Live%20Site%20%E2%86%92-FF2E97?style=for-the-badge&labelColor=0D1117)](https://vomelhor.github.io)
+[![Visit Live Site](https://img.shields.io/badge/Visit%20Live%20Site%20%E2%86%92-FF2E97?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117)](https://vomelhor.github.io)
 &nbsp;
 [![Source Code](https://img.shields.io/badge/Source%20Code-7B2FF7?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/Vomelhor/Vomelhor.github.io)
 
 <br/>
 
-![LIVE](https://img.shields.io/website?url=https%3A%2F%2Fvomelhor.github.io&style=flat-square&color=00FF88&labelColor=0D1117&label=LIVE)
- 
-![Last commit](https://img.shields.io/github/last-commit/Vomelhor/Vomelhor.github.io?style=flat-square&color=00D9FF&labelColor=0D1117)
- 
-![Top language](https://img.shields.io/github/languages/top/Vomelhor/Vomelhor.github.io?style=flat-square&color=7B2FF7&labelColor=0D1117)
- 
-![Stars](https://img.shields.io/github/stars/Vomelhor/Vomelhor.github.io?style=flat-square&color=FF2E97&labelColor=0D1117)
+![LIVE](https://img.shields.io/website?url=https%3A%2F%2Fvomelhor.github.io&style=flat-square&color=00FF88&labelColor=0D1117&label=LIVE)  ![Last commit](https://img.shields.io/github/last-commit/Vomelhor/Vomelhor.github.io?style=flat-square&color=00D9FF&labelColor=0D1117)  ![Stars](https://img.shields.io/github/stars/Vomelhor/Vomelhor.github.io?style=flat-square&color=FF2E97&labelColor=0D1117)
 
 <br/>
 
