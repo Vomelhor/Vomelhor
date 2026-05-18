@@ -1,151 +1,197 @@
-<!-- ╔══════════════════════════════════════════════════════════════╗ -->
-<!-- ║                  VITOR ALVES SANTOS · @Vomelhor                ║ -->
-<!-- ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ╔═══════════════════════════════════════════════════════════════════╗ -->
+<!-- ║              VITOR ALVES SANTOS · @Vomelhor · CYBERPUNK            ║ -->
+<!-- ╚═══════════════════════════════════════════════════════════════════╝ -->
 
 <div align="center">
 
-<!-- ░░░ HEADER WAVE ░░░ -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00F260,100:0575E6&height=220&section=header&text=Vitor%20Alves%20Santos&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Web%20Developer&descSize=20&descAlignY=58" />
+<!-- ░░░░░░░░░░░░░░░░░░░░ HEADER ░░░░░░░░░░░░░░░░░░░░ -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,50:7B2FF7,100:FF2E97&height=240&section=header&text=VITOR%20ALVES%20SANTOS&fontSize=46&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=%E2%9D%AF%20Web%20Developer%20%2F%2F%20Building%20the%20web%2C%20one%20commit%20at%20a%20time&descSize=18&descAlignY=56&stroke=00D9FF&strokeWidth=1" />
 
 <!-- ░░░ TYPING ANIMATION ░░░ -->
 <a href="https://github.com/Vomelhor">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&duration=3000&pause=800&color=00F260&center=true&vCenter=true&width=600&lines=Web+Developer+%F0%9F%92%BB;React+%7C+TypeScript+%7C+JavaScript;Building+things+for+the+web;Always+learning+something+new" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=26&duration=2800&pause=700&color=00D9FF&background=00000000&center=true&vCenter=true&width=650&height=60&lines=%3E_+initializing+developer...;%3E_+Web+Developer+%2F%2F+React+%C2%B7+TypeScript;%3E_+turning+%E2%98%95+into+code;%3E_+always+shipping%2C+always+learning" alt="Typing SVG" />
 </a>
 
 <br/>
 
-<!-- ░░░ SOCIAL / PROFILE BADGES ░░░ -->
+<!-- ░░░ STATUS BADGES ░░░ -->
+<img src="https://img.shields.io/badge/STATUS-ONLINE-FF2E97?style=for-the-badge&labelColor=0D1117" alt="Status"/>
+<img src="https://img.shields.io/badge/FOCUS-WEB%20DEV-00D9FF?style=for-the-badge&labelColor=0D1117" alt="Focus"/>
+<img src="https://img.shields.io/badge/LOCATION-IL%2C%20US-7B2FF7?style=for-the-badge&labelColor=0D1117" alt="Location"/>
+
+<br/><br/>
+
+<!-- ░░░ SOCIAL ░░░ -->
 <a href="https://www.linkedin.com/in/vitor-alves-santos/">
-  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+  <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=0D1117" alt="LinkedIn"/>
 </a>
 <a href="https://github.com/Vomelhor">
-  <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=00F260" alt="GitHub"/>
+  <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=00D9FF" alt="GitHub"/>
 </a>
-<img src="https://komarev.com/ghpvc/?username=Vomelhor&style=for-the-badge&color=00F260&label=PROFILE+VIEWS" alt="Profile Views"/>
+<img src="https://komarev.com/ghpvc/?username=Vomelhor&style=for-the-badge&color=FF2E97&label=VISITORS&labelColor=0D1117" alt="Profile Views"/>
 
 </div>
 
 <br/>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗ -->
-<!-- ║                          ABOUT ME                              ║ -->
-<!-- ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ╔═══════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                            ABOUT                                  ║ -->
+<!-- ╚═══════════════════════════════════════════════════════════════════╝ -->
 
-<img align="right" width="320" src="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/github-contribution-grid-snake-dark.svg" alt="Snake animation"/>
-
-## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="30"> &nbsp; `whoami`
-
-```typescript
-const vitor = {
-  name: "Vitor Alves Santos",
-  role: "Web Developer",
-  location: "Normal, Illinois, US",
-  stack: ["React", "TypeScript", "JavaScript", "HTML", "CSS", "Tailwind"],
-  currentlyLearning: "<!-- preencha aqui: ex. Next.js, Node.js -->",
-  funFact: "<!-- preencha aqui: algo divertido sobre você -->",
-  openToCollab: true,
-};
+```ansi
+[36m╭─ ~/vitor ───────────────────────────────────────────────╮[0m
+[36m│[0m                                                          [36m│[0m
+[36m│[0m  [32m$ whoami[0m                                                [36m│[0m
+[36m│[0m  [37mVitor Alves Santos · @Vomelhor[0m                          [36m│[0m
+[36m│[0m                                                          [36m│[0m
+[36m│[0m  [32m$ cat role.txt[0m                                          [36m│[0m
+[36m│[0m  [37mWeb Developer[0m                                           [36m│[0m
+[36m│[0m                                                          [36m│[0m
+[36m│[0m  [32m$ ls stack/[0m                                             [36m│[0m
+[36m│[0m  [35mReact TypeScript JavaScript HTML CSS Tailwind[0m           [36m│[0m
+[36m│[0m                                                          [36m│[0m
+[36m│[0m  [32m$ status --now[0m                                          [36m│[0m
+[36m│[0m  [33m▸ open to collaboration[0m                                 [36m│[0m
+[36m│[0m                                                          [36m│[0m
+[36m╰──────────────────────────────────────────────────────────╯[0m
 ```
 
-<br clear="right"/>
+> `// TODO:` <!-- preencha: no que você está aprendendo agora -->
+> `// fun_fact:` <!-- preencha: algo divertido sobre você -->
 
-<!-- ╔══════════════════════════════════════════════════════════════╗ -->
-<!-- ║                          TECH STACK                            ║ -->
-<!-- ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ╔═══════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                         TECH STACK                                ║ -->
+<!-- ╚═══════════════════════════════════════════════════════════════════╝ -->
 
-## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> &nbsp; Tech Stack
-
-<div align="center">
-
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
-
-<br/>
-
-<img src="https://skillicons.dev/icons?i=react,ts,js,html,css,tailwind,git,github,vscode&theme=dark" alt="Skills"/>
-
-</div>
-
-<!-- ╔══════════════════════════════════════════════════════════════╗ -->
-<!-- ║                       GITHUB STATS                             ║ -->
-<!-- ╚══════════════════════════════════════════════════════════════╝ -->
-
-## <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="30"> &nbsp; GitHub Stats
+## `>` Tech Stack `_`
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Vomelhor&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00F260&icon_color=0575E6&text_color=ffffff" alt="GitHub Stats"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vomelhor&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F260&text_color=ffffff" alt="Top Languages"/>
-
-<br/>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Vomelhor&theme=radical&hide_border=true&background=0D1117&ring=00F260&fire=0575E6&currStreakLabel=00F260" alt="GitHub Streak"/>
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Vomelhor&theme=react-dark&bg_color=0D1117&color=00F260&line=0575E6&point=ffffff&hide_border=true" alt="Activity Graph" width="100%"/>
+<table>
+<tr>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=react&theme=dark" width="48"/><br/><sub><b>React</b></sub>
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=ts&theme=dark" width="48"/><br/><sub><b>TypeScript</b></sub>
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=js&theme=dark" width="48"/><br/><sub><b>JavaScript</b></sub>
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=html&theme=dark" width="48"/><br/><sub><b>HTML5</b></sub>
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=css&theme=dark" width="48"/><br/><sub><b>CSS3</b></sub>
+</td>
+</tr>
+<tr>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=tailwind&theme=dark" width="48"/><br/><sub><b>Tailwind</b></sub>
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=git&theme=dark" width="48"/><br/><sub><b>Git</b></sub>
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=github&theme=dark" width="48"/><br/><sub><b>GitHub</b></sub>
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=vscode&theme=dark" width="48"/><br/><sub><b>VS Code</b></sub>
+</td>
+<td align="center" width="96">
+<img src="https://skillicons.dev/icons?i=npm&theme=dark" width="48"/><br/><sub><b>npm</b></sub>
+</td>
+</tr>
+</table>
 
 </div>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗ -->
-<!-- ║                     FEATURED PROJECT                           ║ -->
-<!-- ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ╔═══════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                       GITHUB STATS                                ║ -->
+<!-- ╚═══════════════════════════════════════════════════════════════════╝ -->
 
-## <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="30"> &nbsp; Featured Project
+## `>` GitHub Stats `_`
+
+<div align="center">
+
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Vomelhor&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=FF2E97&text_color=c9d1d9&ring_color=7B2FF7" alt="GitHub Stats"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Vomelhor&layout=compact&hide_border=true&bg_color=0D1117&title_color=00D9FF&text_color=c9d1d9&langs_count=8" alt="Top Languages"/>
+
+<br/><br/>
+
+<a href="https://github.com/Vomelhor">
+  <img src="https://streak-stats.demolab.com?user=Vomelhor&hide_border=true&background=0D1117&ring=00D9FF&fire=FF2E97&currStreakLabel=00D9FF&sideLabels=c9d1d9&dates=8b949e&currStreakNum=ffffff&sideNums=ffffff" alt="GitHub Streak (se não aparecer, recarregue a página em alguns segundos)"/>
+</a>
+
+<br/><br/>
+
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Vomelhor&bg_color=0D1117&color=00D9FF&line=FF2E97&point=ffffff&area=true&area_color=7B2FF7&hide_border=true" alt="Activity Graph" width="100%"/>
+
+</div>
+
+<!-- ╔═══════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                     CONTRIBUTION SNAKE                            ║ -->
+<!-- ╚═══════════════════════════════════════════════════════════════════╝ -->
+
+## `>` Contribution Snake `_`
+
+<div align="center">
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake.svg"/>
+  <img alt="snake animation (aparece após configurar a GitHub Action)" src="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake.svg"/>
+</picture>
+
+<br/>
+<sub><i>⚠️ A cobrinha só aparece depois de configurar a GitHub Action (passo a passo no chat).</i></sub>
+
+</div>
+
+<!-- ╔═══════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                     FEATURED PROJECT                              ║ -->
+<!-- ╚═══════════════════════════════════════════════════════════════════╝ -->
+
+## `>` Featured Project `_`
 
 <div align="center">
 
 <a href="https://github.com/Vomelhor/Vomelhor.github.io">
-  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Vomelhor&repo=Vomelhor.github.io&theme=radical&hide_border=true&bg_color=0D1117&title_color=00F260&icon_color=0575E6&text_color=ffffff" alt="Vomelhor.github.io"/>
+  <img src="https://github-readme-stats.vercel.app/api/pin/?username=Vomelhor&repo=Vomelhor.github.io&hide_border=true&bg_color=0D1117&title_color=00D9FF&icon_color=FF2E97&text_color=c9d1d9" alt="Vomelhor.github.io"/>
 </a>
 
-<br/>
+<br/><br/>
 
-**🌐 [Vomelhor.github.io](https://github.com/Vomelhor/Vomelhor.github.io)** — Meu site pessoal, feito com JavaScript.
+<table>
+<tr>
+<td align="center">
+🌐 <b><a href="https://github.com/Vomelhor/Vomelhor.github.io">Vomelhor.github.io</a></b><br/>
+<sub>Meu site pessoal · feito com JavaScript</sub>
+</td>
+</tr>
+</table>
 
 </div>
 
-<!-- ╔══════════════════════════════════════════════════════════════╗ -->
-<!-- ║                          TROPHIES                              ║ -->
-<!-- ╚══════════════════════════════════════════════════════════════╝ -->
+<!-- ╔═══════════════════════════════════════════════════════════════════╗ -->
+<!-- ║                          TROPHIES                                 ║ -->
+<!-- ╚═══════════════════════════════════════════════════════════════════╝ -->
 
-## <img src="https://media.giphy.com/media/HHWHDFMobBpb0PdWMz/giphy.gif" width="30"> &nbsp; Trophies
+## `>` Trophies `_`
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=Vomelhor&theme=radical&no-frame=true&no-bg=true&column=7&margin-w=8&margin-h=8" alt="Trophies"/>
+<img src="https://github-profile-trophy.vercel.app/?username=Vomelhor&theme=algolia&no-frame=true&no-bg=true&column=7&margin-w=6&margin-h=6" alt="Trophies"/>
 
 </div>
 
 <br/>
 
-<!-- ░░░ FOOTER WAVE ░░░ -->
+<!-- ░░░░░░░░░░░░░░░░░░░░ FOOTER ░░░░░░░░░░░░░░░░░░░░ -->
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0575E6,100:00F260&height=120&section=footer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:FF2E97,50:7B2FF7,100:00D9FF&height=140&section=footer&text=thanks%20for%20visiting&fontSize=20&fontColor=ffffff&fontAlignY=70" />
 
-⭐️ From [Vomelhor](https://github.com/Vomelhor)
+<sub>⭐ <code>from</code> <a href="https://github.com/Vomelhor">@Vomelhor</a> <code>with</code> 💙💗</sub>
 
 </div>
-
-<!--
-**Vomelhor/Vomelhor** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
