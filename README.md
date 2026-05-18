@@ -12,7 +12,9 @@
   <img alt="Animated snake eating the contribution graph — neon pink on dark background with cyan and purple dots, updates every 12 hours via GitHub Actions" src="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake.svg" width="100%" />
 </picture>
 
-`<br/>` `<br/>`
+```
+<br/>
+```
 
 ![Personal Portfolio — vomelhor.github.io](https://capsule-render.vercel.app/api?type=soft&color=0D1117&height=60&text=Personal+Portfolio&fontSize=28&fontColor=00D9FF)
 
