@@ -2,7 +2,7 @@
 
 ![Header — VITOR ALVES SANTOS with animated cycling subtitles](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/header.svg)
 
-![Tech stack: React · Next.js · TypeScript · JavaScript · HTML · CSS · Tailwind · Vite · Node.js · PostgreSQL · Firebase · Supabase · Git · GitHub · VS Code · Figma · Slack · Docker · npm · yarn](https://skillicons.dev/icons?i=vscode,nodejs,npm,yarn,git,github,html,css,js,ts,react,tailwind,nextjs,postgres,supabase,docker&theme=dark&perline=20)
+![Tech stack icons](https://skillicons.dev/icons?i=ts,react,nextjs,tailwind,nodejs,express,postgres,prisma,redis,python,docker,aws,firebase,supabase,expo,git,github,vscode,figma,js&theme=dark&perline=10)
 
 <br/>
 
@@ -11,6 +11,8 @@
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake.svg" />
   <img alt="Animated snake eating the contribution graph — neon pink on dark background with cyan and purple dots, updates every 12 hours via GitHub Actions" src="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake.svg" width="100%" />
 </picture>
+
+
 
 ![Personal Portfolio — vomelhor.github.io](https://capsule-render.vercel.app/api?type=soft&color=0D1117&height=60&text=Personal+Portfolio&fontSize=28&fontColor=00D9FF)
 
