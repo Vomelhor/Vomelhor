@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF2E97"/>
+      <stop offset="50%" stop-color="#7B2FF7"/>
+      <stop offset="100%" stop-color="#00D9FF"/>
+    </linearGradient>
+    <style>
+      @keyframes f { 0%,20%{opacity:1} 27%,100%{opacity:0} }
+      .s{font-family:'Courier New',monospace;font-size:17px;fill:#00D9FF;text-anchor:middle}
+      .l1{animation:f 16s infinite 0s}
+      .l2{animation:f 16s infinite 4s;opacity:0}
+      .l3{animation:f 16s infinite 8s;opacity:0}
+      .l4{animation:f 16s infinite 12s;opacity:0}
+    </style>
+  </defs>
+  <rect width="900" height="220" fill="#0D1117"/>
+  <path d="M0,220 Q225,165 450,190 Q675,215 900,180 L900,0 L0,0 Z" fill="url(#g)"/>
+  <text x="450" y="88" font-family="Arial,sans-serif" font-size="44" font-weight="900" fill="#ffffff" text-anchor="middle" letter-spacing="3">VITOR ALVES SANTOS</text>
+  <text class="s l1" x="450" y="152">&gt;_ Developer // React · TypeScript · Next.js</text>
+  <text class="s l2" x="450" y="152">&gt;_ Building interfaces that feel inevitable</text>
+  <text class="s l3" x="450" y="152">&gt;_ Pixel-perfect, fast &amp; intentional</text>
+  <text class="s l4" x="450" y="152">&gt;_ Always shipping, always learning</text>
+</svg>
