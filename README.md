@@ -22,6 +22,10 @@
 
 <br/>
 
+[![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Vomelhor&theme=radical&no-bg=true&no-frame=true&column=7&margin-w=6&margin-h=6)](https://github.com/ryo-ma/github-profile-trophy)
+
+<br/>
+
 ![Footer — built with ♥ by @Vomelhor](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/footer.svg)
 
 </div>
