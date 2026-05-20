@@ -76,6 +76,26 @@
     <animate attributeName="width" values="0;0;313;313;0;0" keyTimes="0;0.9375;0.9509;0.9777;0.9884;1" dur="112s" begin="5.5s" repeatCount="indefinite"/>
   </rect></clipPath>
 
+  <!-- Bottom scrolling wave mask — same tileable technique as footer -->
+  <mask id="hdrWaveMask">
+    <rect width="900" height="220" fill="black"/>
+    <!-- Back wave: period=900px, y centre=210, amplitude ±10 -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="16s" repeatCount="indefinite" calcMode="linear"/>
+      <path d="M0,210 C200,200 700,220 900,210 C1100,200 1600,220 1800,210 L1800,220 L0,220 Z" fill="white" opacity=".3"/>
+    </g>
+    <!-- Middle wave: y centre=207, amplitude ±12 -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="11s" repeatCount="indefinite" calcMode="linear"/>
+      <path d="M0,207 C200,195 700,219 900,207 C1100,195 1600,219 1800,207 L1800,220 L0,220 Z" fill="white" opacity=".6"/>
+    </g>
+    <!-- Front wave: y centre=204, amplitude ±14 -->
+    <g>
+      <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="8s" repeatCount="indefinite" calcMode="linear"/>
+      <path d="M0,204 C200,190 700,218 900,204 C1100,190 1600,218 1800,204 L1800,220 L0,220 Z" fill="white" opacity=".9"/>
+    </g>
+  </mask>
+
 </defs>
 
 <!-- ========================================= -->
@@ -292,6 +312,9 @@
 <g clip-path="url(#p14)"><text x="215" y="168" font-family="Courier New,monospace" font-size="18" fill="#fff">Building interfaces that feel inevitable</text></g>
 <g clip-path="url(#p15)"><text x="215" y="168" font-family="Courier New,monospace" font-size="18" fill="#fff">pixel-perfect, fast &amp; intentional</text></g>
 <g clip-path="url(#p16)"><text x="215" y="168" font-family="Courier New,monospace" font-size="18" fill="#fff">clean code is a love language</text></g>
+
+<!-- Bottom scrolling waves (footer-style) applied via mask over existing gradient -->
+<rect width="900" height="220" fill="url(#g)" mask="url(#hdrWaveMask)"/>
 
 <!-- phrase cursor — appears with prompt, moves with typing -->
 <g opacity="0">
