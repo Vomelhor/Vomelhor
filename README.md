@@ -10,9 +10,7 @@
 
 <br/>
 
-<img src="https://skillicons.dev/icons?i=ts,js,react,nextjs,tailwind,nodejs,express,postgres,prisma,redis,python,docker,aws,firebase,supabase,expo,git,github,vscode,figma&perline=10&theme=dark" alt="Tech Stack" />
-&nbsp;
-[![Claude](https://img.shields.io/badge/Claude-D97757?style=flat-square&logo=anthropic&logoColor=white&labelColor=0D1117)](https://claude.ai)
+![Tech Stack — animated badges for all 18 technologies](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/techstack.svg)
 
 <br/>
 
