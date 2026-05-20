@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160">
 <defs>
   <linearGradient id="pfbar" x1="0%" y1="0%" x2="100%" y2="0%">
     <stop offset="0%" stop-color="#00D9FF" stop-opacity=".5"/>
@@ -100,43 +100,23 @@
   <text x="34" y="102" font-family="Arial,sans-serif" font-size="36" font-weight="900" letter-spacing="3" fill="url(#pfTitle)">PERSONAL PORTFOLIO</text>
 </g>
 
-<!-- Separator line -->
-<rect x="34" y="113" width="430" height="1" fill="url(#pfTitle)" opacity="0">
-  <animate attributeName="opacity" values="0;0.25" dur="0.3s" begin="2.0s" fill="freeze"/>
-</rect>
-
-<!-- Visit Live Site button -->
-<a href="https://vomelhor.github.io">
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="0.45s" begin="2.1s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0,8" to="0,0" dur="0.45s" begin="2.1s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".25 .1 .25 1"/>
-    <rect x="34" y="122" width="196" height="34" rx="17" fill="#FF2E97" fill-opacity="0.1" stroke="#FF2E97" stroke-width="1.2" stroke-opacity="0.8"/>
-    <text x="132" y="143" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="0.5" fill="#FF2E97">Visit Live Site  →</text>
-  </g>
-</a>
-
-<!-- Source Code button -->
-<a href="https://github.com/Vomelhor/Vomelhor.github.io">
-  <g opacity="0">
-    <animate attributeName="opacity" values="0;1" dur="0.45s" begin="2.3s" fill="freeze"/>
-    <animateTransform attributeName="transform" type="translate" from="0,8" to="0,0" dur="0.45s" begin="2.3s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".25 .1 .25 1"/>
-    <rect x="242" y="122" width="148" height="34" rx="17" fill="#7B2FF7" fill-opacity="0.1" stroke="#7B2FF7" stroke-width="1.2" stroke-opacity="0.8"/>
-    <text x="316" y="143" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="0.5" fill="#7B2FF7">Source Code</text>
-  </g>
-</a>
+<!-- Subtitle -->
+<g opacity="0">
+  <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.1s" fill="freeze"/>
+  <text x="36" y="128" font-family="'Courier New',monospace" font-size="12" fill="#ffffff" fill-opacity=".4" letter-spacing="1.5">full-stack · ui systems · creative developer</text>
+</g>
 
 <!-- Right-side floating particles -->
 <circle cx="810" cy="78"  r="1.2" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.4s" repeatCount="indefinite" begin="2.5s"/></circle>
 <circle cx="840" cy="96"  r=".8"  fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="3.1s" repeatCount="indefinite" begin="3.2s"/></circle>
 <circle cx="868" cy="70"  r="1"   fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.8s" repeatCount="indefinite" begin="2.9s"/></circle>
-<circle cx="828" cy="155" r=".9"  fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="1.9s" repeatCount="indefinite" begin="3.5s"/></circle>
-<circle cx="858" cy="172" r="1.1" fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.5s" repeatCount="indefinite" begin="2.3s"/></circle>
-<circle cx="890" cy="138" r=".7"  fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="3.4s" repeatCount="indefinite" begin="3.0s"/></circle>
-<circle cx="880" cy="115" r=".9"  fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.1s" repeatCount="indefinite" begin="2.7s"/></circle>
-<circle cx="855" cy="143" r="1"   fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="2.7s" repeatCount="indefinite" begin="2.8s"/></circle>
+<circle cx="828" cy="118" r=".9"  fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="1.9s" repeatCount="indefinite" begin="3.5s"/></circle>
+<circle cx="858" cy="132" r="1.1" fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.5s" repeatCount="indefinite" begin="2.3s"/></circle>
+<circle cx="890" cy="100" r=".7"  fill="#FF2E97" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="3.4s" repeatCount="indefinite" begin="3.0s"/></circle>
+<circle cx="880" cy="82"  r=".9"  fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.1s" repeatCount="indefinite" begin="2.7s"/></circle>
 
 <!-- Left accent bar -->
-<rect x="0" y="54" width="3" height="144" fill="url(#pfTitle)" opacity="0">
+<rect x="0" y="54" width="3" height="104" fill="url(#pfTitle)" opacity="0">
   <animate attributeName="opacity" values="0;0.6" dur="0.4s" begin="1.4s" fill="freeze"/>
   <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" begin="2s" repeatCount="indefinite"/>
 </rect>
