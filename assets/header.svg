@@ -10,22 +10,6 @@
     <stop offset="50%" stop-color="#7B2FF7"/>
     <stop offset="100%" stop-color="#FF2E97"/>
   </linearGradient>
-  <radialGradient id="bgGlow" cx="50%" cy="40%">
-    <stop offset="0%" stop-color="#161B26"/>
-    <stop offset="100%" stop-color="#0D1117"/>
-  </radialGradient>
-
-  <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
-    <feGaussianBlur stdDeviation="5" result="b"/>
-    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-  </filter>
-  <filter id="softglow" x="-50%" y="-50%" width="200%" height="200%">
-    <feGaussianBlur stdDeviation="9" result="b"/>
-    <feMergeNode in="b"/>
-  </filter>
-  <filter id="cshadow" x="-20%" y="-20%" width="140%" height="140%">
-    <feDropShadow dx="0" dy="1" stdDeviation="1.5" flood-color="#000" flood-opacity=".8"/>
-  </filter>
 
   <!-- name typewriter mask -->
   <clipPath id="nm">
@@ -44,7 +28,7 @@
   <!-- 16 phrase masks — 112s cycle (16 × 7s), begin=9.5s -->
   <!-- each phrase: type 1.5s · hold 3s · delete 1.2s · gap 1.3s -->
   <clipPath id="p1"><rect x="215" y="146" height="26" width="0">
-    <animate attributeName="width" values="0;0;400;400;0;0" keyTimes="0;0.0001;0.0134;0.0402;0.0509;1" dur="112s" begin="7s" repeatCount="indefinite"/>
+    <animate attributeName="width" values="0;0;400;400;0;0" keyTimes="0;0.0001;0.0134;0.0402;0.0509;1" dur="112s" begin="9.5s" repeatCount="indefinite"/>
   </rect></clipPath>
   <clipPath id="p2"><rect x="215" y="146" height="26" width="0">
     <animate attributeName="width" values="0;0;389;389;0;0" keyTimes="0;0.0625;0.0759;0.1027;0.1134;1" dur="112s" begin="9.5s" repeatCount="indefinite"/>
@@ -243,14 +227,16 @@
 <g opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.25s" begin="1s" repeatCount="1" fill="freeze"/>
   <!-- key face -->
-  <rect x="720" y="54" width="52" height="30" rx="4" fill="#FF2E97" stroke="#00D9FF" stroke-width="1.4">
+  <rect x="720" y="54" width="52" height="30" rx="4" fill="#FF2E97" stroke="#00D9FF" stroke-width="1.4" opacity="0.2">
     <animate attributeName="fill"   values="#FF2E97;#00D9FF;#FF2E97" dur="0.22s" begin="4.5s" repeatCount="1" fill="freeze"/>
     <animate attributeName="stroke" values="#00D9FF;#ffffff;#00D9FF" dur="0.22s" begin="4.5s" repeatCount="1" fill="freeze"/>
   </rect>
   <!-- top-edge gloss -->
-  <rect x="697" y="55" width="48" height="3" rx="1.5" fill="#ffffff" fill-opacity=".08"/>
+  <rect x="722" y="55" width="48" height="3" rx="1.5" fill="#ffffff" fill-opacity=".08"/>
+  <!-- bottom-edge gloss -->
+  <rect x="722" y="82" width="48" height="3" rx="1.5" fill="#ffffff" fill-opacity=".08"/>
   <!-- ↵ symbol -->
-  <text x="758" y="72" font-family="Arial,sans-serif" font-size="16" font-weight="500" fill="#00D9FF" text-anchor="middle">&#8629;</text>
+  <text x="758" y="78" font-family="Arial,sans-serif" font-size="16" font-weight="500" fill="#00D9FF" text-anchor="middle">&#8629;</text>
 </g>
 
 <!-- Cursor Modernizado — Design minimalista com degradê e movimento suave --> 
