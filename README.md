@@ -22,7 +22,7 @@
 
 <br/>
 
-[![GitHub Trophies](https://github-profile-trophy.vercel.app/?username=Vomelhor&theme=radical&no-bg=true&no-frame=true&column=7&margin-w=6&margin-h=6)](https://github.com/ryo-ma/github-profile-trophy)
+![GitHub Trophies — 6 custom themed trophy cards](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/trophies.svg)
 
 <br/>
 

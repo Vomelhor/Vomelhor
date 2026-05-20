@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140">
+<defs>
+  <linearGradient id="trBg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#0D1117"/>
+    <stop offset="100%" stop-color="#090d14"/>
+  </linearGradient>
+  <linearGradient id="trBar" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%"   stop-color="#00D9FF" stop-opacity=".6"/>
+    <stop offset="50%"  stop-color="#7B2FF7" stop-opacity=".6"/>
+    <stop offset="100%" stop-color="#FF2E97" stop-opacity=".6"/>
+  </linearGradient>
+  <!-- Strong glow — rank A -->
+  <filter id="glowA" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="5" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <!-- Medium glow — rank C -->
+  <filter id="glowC" x="-40%" y="-40%" width="180%" height="180%">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+</defs>
+
+<!-- Background -->
+<rect width="900" height="140" fill="url(#trBg)"/>
+<!-- Accent bars -->
+<rect width="900" height="2" fill="url(#trBar)"/>
+<rect y="138" width="900" height="2" fill="url(#trBar)"/>
+
+<!-- ── CARD 1 · Commits · A · pink · cx=120 ─────────────────────────── -->
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.1s" fill="freeze"/>
+<rect x="60" y="5" width="120" height="130" rx="8" fill="#100A15" stroke="#FF2E97" stroke-opacity=".35" stroke-width="1"/>
+<circle cx="168" cy="18" r="9" fill="#FF2E97" fill-opacity=".18" stroke="#FF2E97" stroke-opacity=".7" stroke-width="1"/>
+<text x="168" y="22" text-anchor="middle" font-family="Courier New,monospace" font-size="9" font-weight="700" fill="#FF2E97">A</text>
+<g transform="translate(120,60) scale(0.65)" filter="url(#glowA)">
+  <path d="M-20,4 C-24,-8 -16,-18 0,-18 C16,-18 24,-8 20,4 C20,22 10,32 0,32 C-10,32 -20,22 -20,4 Z" fill="#FF2E97"/>
+  <path d="M-20,8 C-30,8 -30,20 -20,20" fill="none" stroke="#FF2E97" stroke-width="5" stroke-linecap="round"/>
+  <path d="M20,8 C30,8 30,20 20,20" fill="none" stroke="#FF2E97" stroke-width="5" stroke-linecap="round"/>
+  <rect x="-4" y="32" width="8" height="10" fill="#FF2E97"/>
+  <rect x="-14" y="42" width="28" height="6" rx="2" fill="#FF2E97"/>
+  <circle cx="0" cy="-7" r="5" fill="#ffffff" fill-opacity=".18"/>
+</g>
+<text x="120" y="103" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FF2E97">Commits</text>
+<text x="120" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#ffffff" fill-opacity=".45">High Committer</text>
+<text x="120" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#FF2E97" fill-opacity=".65">150 pts</text>
+</g>
+
+<!-- ── CARD 2 · Experience · A · gold · cx=252 ──────────────────────── -->
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.22s" fill="freeze"/>
+<rect x="192" y="5" width="120" height="130" rx="8" fill="#100E08" stroke="#FFD700" stroke-opacity=".35" stroke-width="1"/>
+<circle cx="300" cy="18" r="9" fill="#FFD700" fill-opacity=".18" stroke="#FFD700" stroke-opacity=".7" stroke-width="1"/>
+<text x="300" y="22" text-anchor="middle" font-family="Courier New,monospace" font-size="9" font-weight="700" fill="#FFD700">A</text>
+<g transform="translate(252,60) scale(0.65)" filter="url(#glowA)">
+  <path d="M-20,4 C-24,-8 -16,-18 0,-18 C16,-18 24,-8 20,4 C20,22 10,32 0,32 C-10,32 -20,22 -20,4 Z" fill="#FFD700"/>
+  <path d="M-20,8 C-30,8 -30,20 -20,20" fill="none" stroke="#FFD700" stroke-width="5" stroke-linecap="round"/>
+  <path d="M20,8 C30,8 30,20 20,20" fill="none" stroke="#FFD700" stroke-width="5" stroke-linecap="round"/>
+  <rect x="-4" y="32" width="8" height="10" fill="#FFD700"/>
+  <rect x="-14" y="42" width="28" height="6" rx="2" fill="#FFD700"/>
+  <circle cx="0" cy="-7" r="5" fill="#ffffff" fill-opacity=".18"/>
+</g>
+<text x="252" y="103" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FFD700">Experience</text>
+<text x="252" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#ffffff" fill-opacity=".45">Intermediate Dev</text>
+<text x="252" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#FFD700" fill-opacity=".65">13 pts</text>
+</g>
+
+<!-- ── CARD 3 · Stars · C · gold (dim) · cx=384 ─────────────────────── -->
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.34s" fill="freeze"/>
+<rect x="324" y="5" width="120" height="130" rx="8" fill="#0E0D09" stroke="#FFD700" stroke-opacity=".2" stroke-width="1"/>
+<circle cx="432" cy="18" r="9" fill="#FFD700" fill-opacity=".1" stroke="#FFD700" stroke-opacity=".4" stroke-width="1"/>
+<text x="432" y="22" text-anchor="middle" font-family="Courier New,monospace" font-size="9" font-weight="700" fill="#FFD700" fill-opacity=".6">C</text>
+<g transform="translate(384,60) scale(0.65)" opacity=".65" filter="url(#glowC)">
+  <path d="M-20,4 C-24,-8 -16,-18 0,-18 C16,-18 24,-8 20,4 C20,22 10,32 0,32 C-10,32 -20,22 -20,4 Z" fill="#FFD700"/>
+  <path d="M-20,8 C-30,8 -30,20 -20,20" fill="none" stroke="#FFD700" stroke-width="5" stroke-linecap="round"/>
+  <path d="M20,8 C30,8 30,20 20,20" fill="none" stroke="#FFD700" stroke-width="5" stroke-linecap="round"/>
+  <rect x="-4" y="32" width="8" height="10" fill="#FFD700"/>
+  <rect x="-14" y="42" width="28" height="6" rx="2" fill="#FFD700"/>
+  <circle cx="0" cy="-7" r="5" fill="#ffffff" fill-opacity=".15"/>
+</g>
+<text x="384" y="103" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#FFD700" fill-opacity=".65">Stars</text>
+<text x="384" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#ffffff" fill-opacity=".4">First Star</text>
+<text x="384" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#FFD700" fill-opacity=".5">1 pt</text>
+</g>
+
+<!-- ── CARD 4 · Followers · C · cyan · cx=516 ───────────────────────── -->
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.46s" fill="freeze"/>
+<rect x="456" y="5" width="120" height="130" rx="8" fill="#081014" stroke="#00D9FF" stroke-opacity=".2" stroke-width="1"/>
+<circle cx="564" cy="18" r="9" fill="#00D9FF" fill-opacity=".1" stroke="#00D9FF" stroke-opacity=".4" stroke-width="1"/>
+<text x="564" y="22" text-anchor="middle" font-family="Courier New,monospace" font-size="9" font-weight="700" fill="#00D9FF" fill-opacity=".6">C</text>
+<g transform="translate(516,60) scale(0.65)" opacity=".65" filter="url(#glowC)">
+  <path d="M-20,4 C-24,-8 -16,-18 0,-18 C16,-18 24,-8 20,4 C20,22 10,32 0,32 C-10,32 -20,22 -20,4 Z" fill="#00D9FF"/>
+  <path d="M-20,8 C-30,8 -30,20 -20,20" fill="none" stroke="#00D9FF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M20,8 C30,8 30,20 20,20" fill="none" stroke="#00D9FF" stroke-width="5" stroke-linecap="round"/>
+  <rect x="-4" y="32" width="8" height="10" fill="#00D9FF"/>
+  <rect x="-14" y="42" width="28" height="6" rx="2" fill="#00D9FF"/>
+  <circle cx="0" cy="-7" r="5" fill="#ffffff" fill-opacity=".15"/>
+</g>
+<text x="516" y="103" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#00D9FF" fill-opacity=".65">Followers</text>
+<text x="516" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#ffffff" fill-opacity=".4">First Friend</text>
+<text x="516" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#00D9FF" fill-opacity=".5">2 pts</text>
+</g>
+
+<!-- ── CARD 5 · PullRequest · C · purple · cx=648 ───────────────────── -->
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.58s" fill="freeze"/>
+<rect x="588" y="5" width="120" height="130" rx="8" fill="#0B0A14" stroke="#7B2FF7" stroke-opacity=".2" stroke-width="1"/>
+<circle cx="696" cy="18" r="9" fill="#7B2FF7" fill-opacity=".1" stroke="#7B2FF7" stroke-opacity=".4" stroke-width="1"/>
+<text x="696" y="22" text-anchor="middle" font-family="Courier New,monospace" font-size="9" font-weight="700" fill="#7B2FF7" fill-opacity=".6">C</text>
+<g transform="translate(648,60) scale(0.65)" opacity=".65" filter="url(#glowC)">
+  <path d="M-20,4 C-24,-8 -16,-18 0,-18 C16,-18 24,-8 20,4 C20,22 10,32 0,32 C-10,32 -20,22 -20,4 Z" fill="#7B2FF7"/>
+  <path d="M-20,8 C-30,8 -30,20 -20,20" fill="none" stroke="#7B2FF7" stroke-width="5" stroke-linecap="round"/>
+  <path d="M20,8 C30,8 30,20 20,20" fill="none" stroke="#7B2FF7" stroke-width="5" stroke-linecap="round"/>
+  <rect x="-4" y="32" width="8" height="10" fill="#7B2FF7"/>
+  <rect x="-14" y="42" width="28" height="6" rx="2" fill="#7B2FF7"/>
+  <circle cx="0" cy="-7" r="5" fill="#ffffff" fill-opacity=".15"/>
+</g>
+<text x="648" y="103" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#7B2FF7" fill-opacity=".65">PullRequest</text>
+<text x="648" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#ffffff" fill-opacity=".4">First Pull</text>
+<text x="648" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#7B2FF7" fill-opacity=".5">3 pts</text>
+</g>
+
+<!-- ── CARD 6 · Repositories · C · cyan · cx=780 ────────────────────── -->
+<g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.70s" fill="freeze"/>
+<rect x="720" y="5" width="120" height="130" rx="8" fill="#081014" stroke="#00D9FF" stroke-opacity=".2" stroke-width="1"/>
+<circle cx="828" cy="18" r="9" fill="#00D9FF" fill-opacity=".1" stroke="#00D9FF" stroke-opacity=".4" stroke-width="1"/>
+<text x="828" y="22" text-anchor="middle" font-family="Courier New,monospace" font-size="9" font-weight="700" fill="#00D9FF" fill-opacity=".6">C</text>
+<g transform="translate(780,60) scale(0.65)" opacity=".65" filter="url(#glowC)">
+  <path d="M-20,4 C-24,-8 -16,-18 0,-18 C16,-18 24,-8 20,4 C20,22 10,32 0,32 C-10,32 -20,22 -20,4 Z" fill="#00D9FF"/>
+  <path d="M-20,8 C-30,8 -30,20 -20,20" fill="none" stroke="#00D9FF" stroke-width="5" stroke-linecap="round"/>
+  <path d="M20,8 C30,8 30,20 20,20" fill="none" stroke="#00D9FF" stroke-width="5" stroke-linecap="round"/>
+  <rect x="-4" y="32" width="8" height="10" fill="#00D9FF"/>
+  <rect x="-14" y="42" width="28" height="6" rx="2" fill="#00D9FF"/>
+  <circle cx="0" cy="-7" r="5" fill="#ffffff" fill-opacity=".15"/>
+</g>
+<text x="780" y="103" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="#00D9FF" fill-opacity=".65">Repositories</text>
+<text x="780" y="116" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="#ffffff" fill-opacity=".4">First Repository</text>
+<text x="780" y="128" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#00D9FF" fill-opacity=".5">6 pts</text>
+</g>
+
+</svg>
