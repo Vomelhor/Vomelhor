@@ -2,6 +2,20 @@
 
 ![Header — VITOR ALVES SANTOS with animated cycling subtitles](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/header.svg)
 
+<br/>
+
+![Personal Portfolio — vomelhor.github.io](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/portfolio.svg)
+
+[![Visit Live Site](https://img.shields.io/badge/Visit%20Live%20Site%20%E2%86%92-FF2E97?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117)](https://vomelhor.github.io)
+&nbsp;
+[![Source Code](https://img.shields.io/badge/Source%20Code-7B2FF7?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/Vomelhor/Vomelhor.github.io)
+
+<br/>
+
+![LIVE](https://img.shields.io/website?url=https%3A%2F%2Fvomelhor.github.io&style=flat-square&color=00FF88&labelColor=0D1117&label=LIVE)  ![Last commit](https://img.shields.io/github/last-commit/Vomelhor/Vomelhor.github.io?style=flat-square&color=00D9FF&labelColor=0D1117)  ![Stars](https://img.shields.io/github/stars/Vomelhor/Vomelhor.github.io?style=flat-square&color=FF2E97&labelColor=0D1117)
+
+<br/>
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Vomelhor/Vomelhor/output/snake.svg" />
@@ -11,18 +25,6 @@
 <br/>
 
 ![Tech Stack — animated badges for all 18 technologies](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/techstack.svg)
-
-<br/>
-
-![Personal Portfolio — vomelhor.github.io](https://capsule-render.vercel.app/api?type=soft&color=0D1117&height=60&text=Personal+Portfolio&fontSize=28&fontColor=00D9FF)
-
-[![Visit Live Site](https://img.shields.io/badge/Visit%20Live%20Site%20%E2%86%92-FF2E97?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117)](https://vomelhor.github.io)
-&nbsp;
-[![Source Code](https://img.shields.io/badge/Source%20Code-7B2FF7?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117)](https://github.com/Vomelhor/Vomelhor.github.io)
-
-<br/>
-
-![LIVE](https://img.shields.io/website?url=https%3A%2F%2Fvomelhor.github.io&style=flat-square&color=00FF88&labelColor=0D1117&label=LIVE)  ![Last commit](https://img.shields.io/github/last-commit/Vomelhor/Vomelhor.github.io?style=flat-square&color=00D9FF&labelColor=0D1117)  ![Stars](https://img.shields.io/github/stars/Vomelhor/Vomelhor.github.io?style=flat-square&color=FF2E97&labelColor=0D1117)
 
 <br/>
 
