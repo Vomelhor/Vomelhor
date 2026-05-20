@@ -19,27 +19,32 @@
     <feGaussianBlur stdDeviation="5" result="b"/>
     <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
   </filter>
-  <!-- Mask: animated white wave shapes cut a window into the static gradient.
-       The gradient rect never moves — only the mask shapes scroll. -->
+  <!--
+    Each wave period = 900px, animation = translate(0→-900).
+    y(x=0) = y(x=900) = y(x=1800) with matching tangents → zero-seam loop.
+    Control points are symmetric across the 900px period so tangents match
+    exactly at every tile boundary (e.g. back wave: C200,30 700,66 → end
+    tangent (200,-18) equals start tangent of next tile C1100,30 → (200,-18)).
+  -->
   <mask id="waveMask">
     <rect width="900" height="100" fill="black"/>
-    <!-- Back wave: slowest, most transparent -->
+    <!-- Back wave: slowest, faintest — peak y=30, trough y=66 -->
     <g>
       <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="16s" repeatCount="indefinite" calcMode="linear"/>
-      <path d="M0,48 C225,30 675,64 900,48 C1125,30 1575,64 1800,48 L1800,100 L0,100 Z" fill="white" opacity=".3"/>
+      <path d="M0,48 C200,30 700,66 900,48 C1100,30 1600,66 1800,48 L1800,100 L0,100 Z" fill="white" opacity=".3"/>
     </g>
-    <!-- Middle wave -->
+    <!-- Middle wave — peak y=15, trough y=55 -->
     <g>
-      <animateTransform attributeName="transform" type="translate" from="-300,0" to="-1200,0" dur="11s" repeatCount="indefinite" calcMode="linear"/>
-      <path d="M0,38 C150,18 300,56 450,32 C600,8 750,52 900,28 C1050,4 1200,50 1350,26 C1500,2 1650,48 1800,24 L1800,100 L0,100 Z" fill="white" opacity=".6"/>
+      <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="11s" repeatCount="indefinite" calcMode="linear"/>
+      <path d="M0,35 C200,15 700,55 900,35 C1100,15 1600,55 1800,35 L1800,100 L0,100 Z" fill="white" opacity=".6"/>
     </g>
-    <!-- Front wave: fastest, most vivid -->
+    <!-- Front wave: fastest, most vivid — peak y=6, trough y=50 -->
     <g>
       <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="8s" repeatCount="indefinite" calcMode="linear"/>
-      <path d="M0,28 C112,8 225,48 450,20 C675,-8 788,42 900,16 C1012,-10 1125,44 1350,18 C1575,-8 1688,40 1800,14 L1800,100 L0,100 Z" fill="white" opacity=".9"/>
+      <path d="M0,28 C200,6 700,50 900,28 C1100,6 1600,50 1800,28 L1800,100 L0,100 Z" fill="white" opacity=".9"/>
     </g>
   </mask>
-  <!-- Text reveal clip — aligned to where the text actually sits -->
+  <!-- Text reveal — clip rect aligned to actual text body (baseline y=76, font 13px → body y=63-76) -->
   <clipPath id="ftTextClip">
     <rect x="0" y="60" height="22" width="0">
       <animate attributeName="width" from="0" to="900" dur="0.8s" begin="0.3s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines=".25 .1 .25 1"/>
