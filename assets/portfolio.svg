@@ -1,10 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 160">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 120">
 <defs>
-  <linearGradient id="pfbar" x1="0%" y1="0%" x2="100%" y2="0%">
-    <stop offset="0%" stop-color="#00D9FF" stop-opacity=".5"/>
-    <stop offset="50%" stop-color="#7B2FF7" stop-opacity=".5"/>
-    <stop offset="100%" stop-color="#FF2E97" stop-opacity=".5"/>
-  </linearGradient>
   <linearGradient id="pfTitle" x1="0%" y1="0%" x2="100%" y2="0%">
     <stop offset="0%" stop-color="#00D9FF"/>
     <stop offset="50%" stop-color="#7B2FF7"/>
@@ -34,7 +29,7 @@
 </defs>
 
 <!-- Browser chrome top strip -->
-<rect x="0" y="2" width="900" height="50" fill="#0a0e17" fill-opacity=".7"/>
+<rect x="0" y="2" width="900" height="50" rx="12.5" fill="#0a0e17" fill-opacity=".7"/>
 <rect x="0" y="51" width="900" height="1" fill="url(#pfbar)" opacity=".35"/>
 
 <!-- Window dots -->
@@ -100,12 +95,6 @@
   <text x="34" y="102" font-family="Arial,sans-serif" font-size="36" font-weight="900" letter-spacing="3" fill="url(#pfTitle)">PERSONAL PORTFOLIO</text>
 </g>
 
-<!-- Subtitle -->
-<g opacity="0">
-  <animate attributeName="opacity" values="0;1" dur="0.5s" begin="2.1s" fill="freeze"/>
-  <text x="36" y="128" font-family="'Courier New',monospace" font-size="12" fill="#ffffff" fill-opacity=".4" letter-spacing="1.5">full-stack · ui systems · creative developer</text>
-</g>
-
 <!-- Right-side floating particles -->
 <circle cx="810" cy="78"  r="1.2" fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.7;0" dur="2.4s" repeatCount="indefinite" begin="2.5s"/></circle>
 <circle cx="840" cy="96"  r=".8"  fill="#7B2FF7" opacity="0"><animate attributeName="opacity" values="0;.6;0" dur="3.1s" repeatCount="indefinite" begin="3.2s"/></circle>
@@ -116,7 +105,7 @@
 <circle cx="880" cy="82"  r=".9"  fill="#00D9FF" opacity="0"><animate attributeName="opacity" values="0;.5;0" dur="2.1s" repeatCount="indefinite" begin="2.7s"/></circle>
 
 <!-- Left accent bar -->
-<rect x="0" y="54" width="3" height="104" fill="url(#pfTitle)" opacity="0">
+<rect x="0" y="54" width="3" height="100" fill="url(#pfTitle)" opacity="0">
   <animate attributeName="opacity" values="0;0.6" dur="0.4s" begin="1.4s" fill="freeze"/>
   <animate attributeName="opacity" values="0.6;0.3;0.6" dur="3s" begin="2s" repeatCount="indefinite"/>
 </rect>
