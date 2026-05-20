@@ -82,98 +82,24 @@
     <!-- Back wave: period=900px, y centre=210, amplitude ±10 -->
     <g>
       <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="16s" repeatCount="indefinite" calcMode="linear"/>
-      <path d="M0,210 C200,200 700,220 900,210 C1100,200 1600,220 1800,210 L1800,220 L0,220 Z" fill="white" opacity=".3"/>
+      <path d="M0,210 C200,220 700,200 900,210 C1100,220 1600,200 1800,210 L1800,0 L0,0 Z" fill="white" opacity=".3"/>
     </g>
     <!-- Middle wave: y centre=207, amplitude ±12 -->
     <g>
       <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="11s" repeatCount="indefinite" calcMode="linear"/>
-      <path d="M0,207 C200,195 700,219 900,207 C1100,195 1600,219 1800,207 L1800,220 L0,220 Z" fill="white" opacity=".6"/>
+      <path d="M0,207 C200,219 700,195 900,207 C1100,219 1600,195 1800,207 L1800,0 L0,0 Z" fill="white" opacity=".6"/>
     </g>
     <!-- Front wave: y centre=204, amplitude ±14 -->
     <g>
       <animateTransform attributeName="transform" type="translate" from="0,0" to="-900,0" dur="8s" repeatCount="indefinite" calcMode="linear"/>
-      <path d="M0,204 C200,190 700,218 900,204 C1100,190 1600,218 1800,204 L1800,220 L0,220 Z" fill="white" opacity=".9"/>
+      <path d="M0,204 C200,218 700,190 900,204 C1100,218 1600,190 1800,204 L1800,0 L0,0 Z" fill="white" opacity=".9"/>
     </g>
   </mask>
 
 </defs>
 
-<!-- ========================================= -->
-<!-- WAVE 1 -->
-<!-- ========================================= -->
-
-<path
-  fill="url(#g)"
-  opacity="0.95"
->
-
-  <animate
-    attributeName="d"
-    dur="8s"
-    repeatCount="indefinite"
-
-    values="
-      M0,0 L900,0 L900,190
-      C760,240 650,150 500,190
-      C350,230 220,150 0,200 Z;
-
-      M0,0 L900,0 L900,210
-      C780,160 620,250 450,190
-      C280,140 120,240 0,180 Z;
-
-      M0,0 L900,0 L900,190
-      C760,240 650,150 500,190
-      C350,230 220,150 0,200 Z
-    "
-  />
-
-</path>
-
-<!-- ========================================= -->
-<!-- WAVE 2 -->
-<!-- ========================================= -->
-
-<path
-  fill="url(#g)"
-  opacity="0.35"
-  filter="url(#glow)"
->
-
-  <animate
-    attributeName="d"
-    dur="10s"
-    repeatCount="indefinite"
-
-    values="
-      M0,0 L900,0 L900,205
-      C820,170 700,250 520,210
-      C340,170 180,240 0,195 Z;
-
-      M0,0 L900,0 L900,185
-      C760,250 620,140 430,210
-      C240,260 120,150 0,210 Z;
-
-      M0,0 L900,0 L900,205
-      C820,170 700,250 520,210
-      C340,170 180,240 0,195 Z
-    "
-  />
-
-</path>
-
-
-<!-- ── Header fill wave — gradient covers top, wavy bottom edge (footer upside-down) ── -->
-<path fill="url(#headerFill)" fill-opacity=".92">
-  <animate attributeName="d" dur="7s" repeatCount="indefinite" calcMode="spline"
-    keySplines=".42 0 .58 1;.42 0 .58 1;.42 0 .58 1;.42 0 .58 1"
-    values="
-      M0,218 C165,205 308,223 470,213 C632,204 785,220 900,214 L900,0 L0,0 Z;
-      M0,212 C145,226 308,207 490,220 C672,230 818,211 900,223 L900,0 L0,0 Z;
-      M0,221 C182,208 344,224 514,212 C684,203 836,218 900,210 L900,0 L0,0 Z;
-      M0,215 C158,229 318,208 496,221 C674,230 825,212 900,219 L900,0 L0,0 Z;
-      M0,218 C165,205 308,223 470,213 C632,204 785,220 900,214 L900,0 L0,0 Z
-    "/>
-</path>
+<!-- Scrolling wave background — gradient through upside-down wave mask -->
+<rect width="900" height="220" fill="url(#g)" mask="url(#hdrWaveMask)"/>
 
 <!-- ── Stars (drawn AFTER gradient so they appear on it) ──────────── -->
 <circle cx="22"  cy="12" r="1"   fill="#fff" opacity="0"><animate attributeName="opacity" values="0;.9;0" dur="2.4s" repeatCount="indefinite" begin="0s"/></circle>
@@ -313,9 +239,6 @@
 <g clip-path="url(#p15)"><text x="215" y="168" font-family="Courier New,monospace" font-size="18" fill="#fff">pixel-perfect, fast &amp; intentional</text></g>
 <g clip-path="url(#p16)"><text x="215" y="168" font-family="Courier New,monospace" font-size="18" fill="#fff">clean code is a love language</text></g>
 
-<!-- Bottom scrolling waves (footer-style) applied via mask over existing gradient -->
-<rect width="900" height="220" fill="url(#g)" mask="url(#hdrWaveMask)"/>
-
 <!-- phrase cursor — appears with prompt, moves with typing -->
 <g opacity="0">
   <animate attributeName="opacity" from="0" to="1" dur="0.2s" begin="5.5s" repeatCount="1" fill="freeze"/>
@@ -328,24 +251,5 @@
   </rect>
 </g>
 
-<!-- ── Waves — 3 layers, fill toward content below ─────────────────── -->
-<!-- wave 3: faint glow layer, 14s -->
-<path fill="url(#ng)" fill-opacity=".18" filter="url(#softglow)">
-  <animate attributeName="d" dur="14s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"
-    values="
-      M0,210 C200,199 360,217 540,208 C720,200 840,214 900,210 L900,260 L0,260 Z;
-      M0,205 C180,218 350,201 530,212 C710,221 840,204 900,214 L900,260 L0,260 Z;
-      M0,210 C200,199 360,217 540,208 C720,200 840,214 900,210 L900,260 L0,260 Z
-    "/>
-</path>
-<!-- wave 2: secondary glow, 10s -->
-<path fill="url(#ng)" fill-opacity=".40" filter="url(#glow)">
-  <animate attributeName="d" dur="10s" repeatCount="indefinite" calcMode="spline" keySplines=".45 0 .55 1;.45 0 .55 1"
-    values="
-      M0,214 C160,201 325,219 505,209 C685,201 828,217 900,212 L900,260 L0,260 Z;
-      M0,208 C172,221 345,202 522,215 C699,224 835,206 900,217 L900,260 L0,260 Z;
-      M0,214 C160,201 325,219 505,209 C685,201 828,217 900,212 L900,260 L0,260 Z
-    "/>
-</path>
 
 </svg>
