@@ -22,6 +22,6 @@
 
 <br/>
 
-![Footer wave — built with 💙 by @Vomelhor](https://capsule-render.vercel.app/api?type=waving&color=0:00D9FF,50:7B2FF7,100:FF2E97&height=140&section=footer&animation=twinkling&text=built%20with%20%F0%9F%92%99%20by%20%40Vomelhor&fontSize=14&fontColor=ffffff&fontAlignY=72)
+![Footer — built with ♥ by @Vomelhor](https://raw.githubusercontent.com/Vomelhor/Vomelhor/main/assets/footer.svg)
 
 </div>
