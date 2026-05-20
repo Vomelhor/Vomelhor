@@ -233,8 +233,6 @@
   </rect>
   <!-- top-edge gloss -->
   <rect x="722" y="55" width="48" height="3" rx="1.5" fill="#ffffff" fill-opacity=".08"/>
-  <!-- bottom-edge gloss -->
-  <rect x="722" y="82" width="48" height="3" rx="1.5" fill="#ffffff" fill-opacity=".08"/>
   <!-- ↵ symbol -->
   <text x="758" y="78" font-family="Arial,sans-serif" font-size="16" font-weight="500" fill="#00D9FF" text-anchor="middle">&#8629;</text>
 </g>
