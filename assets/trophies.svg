@@ -1,9 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 140">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 150">
 <defs>
-  <linearGradient id="trBg" x1="0%" y1="0%" x2="0%" y2="100%">
-    <stop offset="0%" stop-color="#0D1117"/>
-    <stop offset="100%" stop-color="#090d14"/>
-  </linearGradient>
   <linearGradient id="trBar" x1="0%" y1="0%" x2="100%" y2="0%">
     <stop offset="0%"   stop-color="#00D9FF" stop-opacity=".6"/>
     <stop offset="50%"  stop-color="#7B2FF7" stop-opacity=".6"/>
@@ -19,9 +15,8 @@
   </filter>
 </defs>
 
-<rect width="900" height="140" fill="url(#trBg)"/>
-<rect width="900" height="2" fill="url(#trBar)"/>
-<rect y="138" width="900" height="2" fill="url(#trBar)"/>
+<rect width="900" height="150" fill="url(#trBg)"/>
+<rect y="148" width="900" height="2" fill="url(#trBar)"/>
 
 <!-- ── CARD 1 · Commits · A · #FF2E97 pink · cx=120 ─────────────────── -->
 <g opacity="0"><animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.1s" fill="freeze"/>
